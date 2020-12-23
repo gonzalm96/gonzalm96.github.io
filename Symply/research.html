@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>R&amp;M</title>
+</head>
+
+<body>
+    <nav class="nav_wrapper">
+        <ul style="list-style-type: none;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutSymply.html">About Symply</a></li>
+            <li class="active"><a href="research.html" style="color:white;">Research</a></li>
+            <li><a href="development.html">Development</a></li>
+            <li><a href="about.html">Our Team</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <h1>We designed our Symply in three stages</h1>
+        <div class="lit-review">
+            <h2>Stage 1: Systematic literature review</h2>
+            <p>In total the team read 8 papers regarding ICT approaches to chornic illness. Each member of the team drafted a design 
+                and then came together to determine a prototype design.
+            </p>
+            <div class="images-container">
+                <!-- Images used to open the lightbox -->
+                <div class="row">
+                    <div class="column">
+                        <img src="hw2/firstPin.png" onclick="openModal(1);currentSlide(1,1)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw2/homeScreen.png" onclick="openModal(1);currentSlide(2,1)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw2/treatment.png" onclick="openModal(1);currentSlide(3,1)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw2/addTreat.png" onclick="openModal(1);currentSlide(4,1)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw2/calendar.png" onclick="openModal(1);currentSlide(4,1)" class="hover-shadow">
+                    </div>
+                </div>
+                
+                <!-- The Modal/Lightbox -->
+                <div id="myModal1" class="modal">
+                    <span class="close cursor" onclick="closeModal(1)">&times;</span>
+                    <div class="modal-content">
+                
+                        <div class="mySlides1">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="hw2/firstPin.png" style="width:100%">
+                        </div>
+                
+                        <div class="mySlides1">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="hw2/homeScreen.png" style="width:100%">
+                        </div>
+                
+                        <div class="mySlides1">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="hw2/treatment.png"   style="width:100%">
+                        </div>
+                
+                        <div class="mySlides1">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="hw2/addTreat.png" style="width:100%">
+                        </div>
+                        <div class="mySlides1">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="hw2/calendar.png" style="width:100%">
+                        </div>
+                
+                        <!-- Next/previous controls -->
+                        <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sys-review">
+            <h2>Stage 2: System Analysis</h2>
+            <p>After looking at 8 existing ICT systems related to chronic illness, each member had the opportunity to refine the previous
+                    prototype design. 
+            </p>
+            <div class="images-container">
+                <!-- Images used to open the lightbox -->
+                <div class="row">
+                    <div class="column">
+                        <img src="hw3/pinv2.png" onclick="openModal(2);currentSlide(1,2)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw3/homev2.png" onclick="openModal(2);currentSlide(2,2)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw3/exportv2.png" onclick="openModal(2);currentSlide(3,2)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw3/addTreatv2.png" onclick="openModal(2);currentSlide(4,2)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw3/calendarv2.png" onclick="openModal(2);currentSlide(5,2)" class="hover-shadow">
+                    </div>
+                </div>
+            
+                <!-- The Modal/Lightbox -->
+                <div id="myModal2" class="modal">
+                    <span class="close cursor" onclick="closeModal(2)">&times;</span>
+                    <div class="modal-content">
+            
+                        <div class="mySlides2">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="hw3/pinv2.png" style="width:100%">
+                        </div>
+            
+                        <div class="mySlides2">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="hw3/homev2.png" style="width:100%">
+                        </div>
+            
+                        <div class="mySlides2">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="hw3/exportv2.png" style="width:100%">
+                        </div>
+            
+                        <div class="mySlides2">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="hw3/addTreatv2.png" style="width:100%">
+                        </div>
+                        <div class="mySlides2">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="hw3/calendarv2.png" style="width:100%">
+                        </div>
+            
+                        <!-- Next/previous controls -->
+                        <a class="prev" onclick="plusSlides(-1,2)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,2)">&#10095;</a>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="usr-review">
+            <h2>Stage 3: User Study</h2>
+            <P>Each member of the team had the opportunity to interview a potential user of our application. Using the information gathered 
+                    from these interviews, we revised our design one last time before starting the development process. The most noticable difference is we condensed
+                    some screens into one screen, and refined the bottom bar down to only a few screens.
+            </p>
+            <div class="images-container">
+                <!-- Images used to open the lightbox -->
+                <div class="row">
+                    <div class="column">
+                        <img src="hw4/pinv3.png" onclick="openModal(3);currentSlide(1,3)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw4/quickLog.png" onclick="openModal(3);currentSlide(2,3)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw4/loggingv3.png" onclick="openModal(3);currentSlide(3,3)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw4/treatmentv3.png" onclick="openModal(3);currentSlide(4,3)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw4/addTreatv3.png" onclick="openModal(3);currentSlide(5,3)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw4/reminders.png" onclick="openModal(3);currentSlide(6,3)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="hw4/profile.png" onclick="openModal(3);currentSlide(7,3)" class="hover-shadow">
+                    </div>
+                </div>
+            
+                <!-- The Modal/Lightbox -->
+                <div id="myModal3" class="modal">
+                    <span class="close cursor" onclick="closeModal(3)">&times;</span>
+                    <div class="modal-content">
+            
+                        <div class="mySlides3">
+                            <div class="numbertext">1 / 7</div>
+                            <img src="hw4/pinv3.png" style="width:100%">
+                        </div>
+            
+                        <div class="mySlides3">
+                            <div class="numbertext">2 / 7</div>
+                            <img src="hw4/quickLog.png" style="width:100%">
+                        </div>
+                        <div class="mySlides3">
+                            <div class="numbertext">3 / 7</div>
+                            <img src="hw4/loggingv3.png" style="width:100%">
+                        </div>
+            
+                        <div class="mySlides3">
+                            <div class="numbertext">4 / 7</div>
+                            <img src="hw4/treatmentv3.png" style="width:100%">
+                        </div>
+            
+                        <div class="mySlides3">
+                            <div class="numbertext">5 / 7</div>
+                            <img src="hw4/addTreatv3.png" style="width:100%">
+                        </div>
+                        <div class="mySlides3">
+                            <div class="numbertext">6 / 7</div>
+                            <img src="hw4/reminders.png" style="width:100%">
+                        </div>
+                        <div class="mySlides3">
+                            <div class="numbertext">7 / 7</div>
+                            <img src="hw4/profile.png" style="width:100%">
+                        </div>
+            
+                        <!-- Next/previous controls -->
+                        <a class="prev" onclick="plusSlides(-1,3)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,3)">&#10095;</a>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="findings">
+            <h2>Findings</h2>
+            <p>Throughout our research we found that users primarily wanted:</p>
+            <ul>
+                <li>Ease of use</li>
+                <li>Ability to track and view symptoms</li>
+                <li>Have a reminder feature to help with medical adherence</li>
+                <li>Some sort of secure login to protect their information</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Western Washington University<br>
+            CSCI 436: Technology for Social Good, Winter 2019<br>
+            Course taught by Dr. Shameem Ahmed</p>
+        </div>
+    </footer>
+</body>
+
+
+<script src="slider.js"></script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Development</title>
+</head>
+<body>
+    <nav class="nav_wrapper">
+        <ul style="list-style-type: none;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutSymply.html">About Symply</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li class="active"><a href="development.html" style="color:white;">Development</a></li>
+            <li><a href="about.html">Our Team</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <h1>Current Implementation Demo</h1>
+        <div class="video">
+            <span class="video-player"><iframe width="560" height="315" src="https://www.youtube.com/embed/Gx6wQtNVl1w" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+        </div>
+        <h1>Symply's Features</h1>
+        <div class="card-container">
+            <div class="card">
+                <div class="feature-image">
+                    <img class="feature-image-right" src="./finalPrototype/pin.png" alt="Login Screen" />
+                </div>
+                <div class="feature-title"><h2>Login</h2></div>
+                <div class="feature-desc"><h4>Users can set a pin to provide an additional layer of security for their confidential medical information</h4></div>
+            </div>
+            <div class="card-flipped">
+                <div class="feature-image">
+                    <img class="feature-image-left" src="./finalPrototype/logging.png" alt="Home Screen" />
+                </div>
+                <div class="feature-title"><h2>Home Screen</h2></div>
+                <div class="feature-desc"><h4>For quick and easy logging, the landing screen allows users to record symptom incidents without having to go to a
+                separate scree</h4></div>
+            </div>
+            <div class="card">
+                <div class="feature-image">
+                    <img class="feature-image-right" src="./finalPrototype/treatment.png" alt="Medical Information" />
+                </div>
+                <div class="feature-title"><h2>Medical Information</h2></div>
+                <div class="feature-desc"><h4>Various lists provide a visual log of any symptoms, treatments, appointments, or providers the user wants to track</h4></div>
+            </div>
+            <div class="card-flipped">
+                <div class="feature-image">
+                    <img class="feature-image-left" src="./finalPrototype/addTreatment.png" alt="Add treatment form" />
+                </div>
+                <div class="feature-title"><h2>Forms</h2></div>
+                <div class="feature-desc"><h4>Users can add new reminders, appointments, providers, and treatments straight from the corresponding list screen</h4></div>
+            </div>
+            <div class="card">
+                <div class="feature-image">
+                    <img class="feature-image-right" src="./finalPrototype/reminders.png" alt="Reminders" />
+                </div>
+                <div class="feature-title"><h2>Reminders</h2></div>
+                <div class="feature-desc"><h4>Users can set reminders to help them stay on track with their treatments, appointments, or self-care habits</h4></div>
+            </div>
+        </div>
+        <p>The entire application was made using React Native. To store information like symptoms and treatments we used the
+            Realm database.
+            Realm is an offline-first database that stores information fast and locally on your device.</p>
+        <p>Link to our <a href="#">GitHub Repo</a></p>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Western Washington University<br>
+                CSCI 436: Technology for Social Good, Winter 2019<br>
+                Course taught by Dr. Shameem Ahmed</p>
+        </div>
+    </footer>
+</body>
+</html>
