@@ -1,10 +1,10 @@
-$mainColor: #838F3D;
-$secondaryColor: #384D48;
-$textColor: #F2E9E4;
+$mainColor: #91785D;
+$secondaryColor: #BBE1C3;
+$textColor: #A7CDBD;
 
 html{
     background-color: $mainColor;
-    font-family: 'Teko', sans-serif;
+    font-family: 'Gaegu', cursive;
     color: $textColor;
 }
 
@@ -116,16 +116,23 @@ h2{
 
     .pageTitle{
         order: 1;
+        text-align: left;
     }
 
     .topFour{
         order:2;
+        h2 {
+            text-align: center;
+        }
     }
 
     .playlist{
         order:3;
         margin:auto;
         padding-top:25px;
+        h2{
+            text-align: center;
+        }
         iframe{
             width:100%;
         }

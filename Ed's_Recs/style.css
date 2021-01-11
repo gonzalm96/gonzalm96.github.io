@@ -1,7 +1,7 @@
 html {
-  background-color: #838F3D;
-  font-family: "Teko", sans-serif;
-  color: #F2E9E4;
+  background-color: #91785D;
+  font-family: "Gaegu", cursive;
+  color: #A7CDBD;
 }
 
 body {
@@ -73,7 +73,7 @@ h2 {
 }
 
 .box:hover {
-  border-bottom: 0.5px solid #384D48;
+  border-bottom: 0.5px solid #BBE1C3;
 }
 
 .playlist {
@@ -98,16 +98,23 @@ h2 {
 
   .pageTitle {
     order: 1;
+    text-align: left;
   }
 
   .topFour {
     order: 2;
+  }
+  .topFour h2 {
+    text-align: center;
   }
 
   .playlist {
     order: 3;
     margin: auto;
     padding-top: 25px;
+  }
+  .playlist h2 {
+    text-align: center;
   }
   .playlist iframe {
     width: 100%;
