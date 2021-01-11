@@ -99,7 +99,10 @@ h2{
 }
 
 .box:hover{
-    border-bottom:.5px solid $secondaryColor; 
+    
+    img{
+        border-right:.5px solid $secondaryColor; 
+    }
 }
 .playlist{
     grid-area:right;
