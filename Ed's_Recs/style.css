@@ -85,7 +85,7 @@ h2 {
   margin-bottom: 0;
 }
 
-.box:hover img {
+.box:hover {
   border-right: 5px solid #BBE1C3;
 }
 
