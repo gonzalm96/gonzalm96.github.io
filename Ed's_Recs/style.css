@@ -85,7 +85,7 @@ h2 {
   margin-bottom: 0;
 }
 
-.box:hover {
+.box p:hover {
   text-decoration: underline;
 }
 
