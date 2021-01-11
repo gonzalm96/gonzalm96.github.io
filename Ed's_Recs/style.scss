@@ -30,7 +30,7 @@ body{
     "top top top"
     "left mid right";
     grid-template-columns: 1.5fr .25fr 1fr;
-    grid-template-rows: 75px auto;
+    grid-template-rows: 50px auto;
     overflow-y:hidden;
 }
 
@@ -101,7 +101,9 @@ h2{
 }
 
 .box:hover{
-    text-decoration: underline;
+    p{
+        text-decoration: underline;
+    }
 }
 .playlist{
     grid-area:right;
