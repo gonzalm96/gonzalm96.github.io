@@ -27,9 +27,11 @@ body {
 }
 
 .pageTitle {
+  position: relative;
   grid-area: top;
   text-align: center;
   font-size: 2em;
+  bottom: 25px;
 }
 .pageTitle h1 {
   margin-top: 0;

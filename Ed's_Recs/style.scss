@@ -35,6 +35,7 @@ body{
 }
 
 .pageTitle{
+    position: relative;
     grid-area:top;
     text-align: center;
     h1{
@@ -42,6 +43,7 @@ body{
         margin-bottom: 0;
     }
     font-size:2em;
+    bottom:25px;
 }
 
 h2{
