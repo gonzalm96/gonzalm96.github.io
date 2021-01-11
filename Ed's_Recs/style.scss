@@ -101,7 +101,7 @@ h2{
 }
 
 .box:hover{
-        border-right:1px solid $secondaryColor; 
+    text-decoration: underline;
 }
 .playlist{
     grid-area:right;

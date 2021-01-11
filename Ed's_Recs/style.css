@@ -86,7 +86,7 @@ h2 {
 }
 
 .box:hover {
-  border-right: 1px solid #BBE1C3;
+  text-decoration: underline;
 }
 
 .playlist {
