@@ -116,6 +116,7 @@ h2 {
   .topFour {
     order: 2;
     margin-bottom: 10px;
+    height: 150%;
   }
   .topFour h2 {
     text-align: center;
