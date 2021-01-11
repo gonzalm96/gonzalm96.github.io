@@ -85,7 +85,11 @@ h2 {
   margin-bottom: 0;
 }
 
+<<<<<<< HEAD
 .box:hover p {
+=======
+.box p:hover {
+>>>>>>> aa226ef51fee20567d00919d401306aa268bbb1d
   text-decoration: underline;
 }
 
