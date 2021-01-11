@@ -28,10 +28,10 @@ body {
 
 .pageTitle {
   position: relative;
+  bottom: 25px;
   grid-area: top;
   text-align: center;
   font-size: 2em;
-  bottom: 25px;
 }
 .pageTitle h1 {
   margin-top: 0;
@@ -86,7 +86,7 @@ h2 {
 }
 
 .box:hover img {
-  border-right: 0.5px solid #BBE1C3;
+  border-right: 5px solid #BBE1C3;
 }
 
 .playlist {

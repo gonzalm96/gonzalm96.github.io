@@ -36,6 +36,7 @@ body{
 
 .pageTitle{
     position: relative;
+    bottom:25px;
     grid-area:top;
     text-align: center;
     h1{
@@ -43,7 +44,6 @@ body{
         margin-bottom: 0;
     }
     font-size:2em;
-    bottom:25px;
 }
 
 h2{
@@ -103,7 +103,7 @@ h2{
 .box:hover{
     
     img{
-        border-right:.5px solid $secondaryColor; 
+        border-right:5px solid $secondaryColor; 
     }
 }
 .playlist{
