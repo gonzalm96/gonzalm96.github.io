@@ -31,7 +31,7 @@ body{
     "left mid right";
     grid-template-columns: 1.5fr .25fr 1fr;
     grid-template-rows: 50px auto;
-    overflow-y:hidden;
+    // overflow-y:hidden;
 }
 
 .pageTitle{
