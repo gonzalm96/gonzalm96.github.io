@@ -6,11 +6,14 @@ html{
     background-color: $mainColor;
     font-family: 'Gaegu', cursive;
     color: $textColor;
+    height:95%;
 }
 
 body{
-    padding: 10px 5px 0 5px;
+    padding: 5px 5px 0 5px;
     overflow: hidden;
+    margin:0;
+    height:100%;
 }
 
 .wrapper{
@@ -20,9 +23,9 @@ body{
     position: relative;
     // background-color: salmon;
     display: grid;
-    margin:auto;
+    margin:auto; 
     width:85%;
-    //height:100%;
+    height:100%;
     grid-template-areas: 
     "top top top"
     "left mid right";
@@ -46,6 +49,12 @@ h2{
     font-size: 2em;
     margin-top:0;
     margin-bottom:0;
+}
+
+.topFour{
+    grid-area: left;
+    margin-bottom:10px;
+    height:100%;
 }
 
 .albumCovers{

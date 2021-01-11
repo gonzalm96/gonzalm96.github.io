@@ -2,11 +2,14 @@ html {
   background-color: #91785D;
   font-family: "Gaegu", cursive;
   color: #A7CDBD;
+  height: 95%;
 }
 
 body {
-  padding: 10px 5px 0 5px;
+  padding: 5px 5px 0 5px;
   overflow: hidden;
+  margin: 0;
+  height: 100%;
 }
 
 .wrapper {
@@ -16,6 +19,7 @@ body {
   display: grid;
   margin: auto;
   width: 85%;
+  height: 100%;
   grid-template-areas: "top top top" "left mid right";
   grid-template-columns: 1.5fr 0.25fr 1fr;
   grid-template-rows: 75px auto;
@@ -37,6 +41,12 @@ h2 {
   font-size: 2em;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.topFour {
+  grid-area: left;
+  margin-bottom: 10px;
+  height: 100%;
 }
 
 .albumCovers {
