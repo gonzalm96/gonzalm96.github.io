@@ -106,7 +106,6 @@ h2 {
 @media only screen and (max-width: 841px) {
   html, body {
     overflow: visible;
-    background-color: tomato;
   }
 
   .wrapper {
