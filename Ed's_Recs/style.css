@@ -132,8 +132,7 @@ h2 {
 
   .playlist {
     order: 3;
-    margin-top: 50px;
-    padding-bottom: 25px;
+    margin: 50px auto 25px auto;
   }
   .playlist h2 {
     display: none;
