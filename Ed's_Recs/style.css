@@ -125,7 +125,6 @@ h2 {
     order: 2;
     margin-bottom: 10px;
     height: 150%;
-    background-color: tomato;
   }
   .topFour h2 {
     text-align: center;
@@ -134,7 +133,7 @@ h2 {
   .playlist {
     order: 3;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .playlist h2 {
     display: none;
