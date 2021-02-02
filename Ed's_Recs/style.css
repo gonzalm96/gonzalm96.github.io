@@ -103,8 +103,8 @@ h2 {
   height: 450px;
 }
 
-@media only screen and (max-width: 1200px) {
-  body {
+@media only screen and (max-width: 841px) {
+  html, body {
     overflow: visible;
   }
 
@@ -115,7 +115,6 @@ h2 {
     margin: auto;
     margin-bottom: 50px;
     padding-top: 15%;
-    background-color: tomato;
   }
 
   .pageTitle {
@@ -134,7 +133,8 @@ h2 {
 
   .playlist {
     order: 3;
-    margin: 100px auto 100px auto;
+    margin: 50px auto 100px auto;
+    padding-bottom: 100px;
   }
   .playlist h2 {
     display: none;
