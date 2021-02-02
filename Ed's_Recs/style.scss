@@ -153,12 +153,18 @@ h2{
     .playlist{
         order:3;
         margin:auto;
-        padding-top:25px;
+        margin-top:50px;
         h2{
             display: none;
         }
         iframe{
             width:100%;
+        }
+    }
+
+    .box{
+        a:visited {
+            color: $textColor;
         }
     }
 }
