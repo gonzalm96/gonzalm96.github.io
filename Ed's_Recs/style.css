@@ -132,6 +132,7 @@ h2 {
 
   .playlist {
     order: 3;
+    background-color: tomato;
     margin: auto;
     margin-top: 100px;
   }
