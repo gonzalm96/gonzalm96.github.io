@@ -108,3 +108,12 @@ $("#symply").hover(
         $("#symply-desc").animate({ opacity: 0 }, 200);
     }
 );
+
+$("#odds").hover(
+    function () {
+        //fadein second image using jQuery fadeIn 
+        $("#odds-desc").animate({ opacity: 100 }, 200);
+    }, function () {
+        $("#odds-desc").animate({ opacity: 0 }, 200);
+    }
+);
