@@ -117,3 +117,17 @@ $("#odds").hover(
         $("#odds-desc").animate({ opacity: 0 }, 200);
     }
 );
+
+$("#count").hover(
+    function () {
+        //fadein second image using jQuery fadeIn 
+        $("#count-desc").animate({
+            opacity: 100
+        }, 200);
+    },
+    function () {
+        $("#count-desc").animate({
+            opacity: 0
+        }, 200);
+    }
+);
