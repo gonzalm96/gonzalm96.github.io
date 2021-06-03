@@ -1,0 +1,19 @@
+html {
+  background-color: tomato;
+  height: 100%;
+}
+
+header {
+  background-color: forestgreen;
+  margin: auto;
+}
+
+.banner {
+  max-height: 50%;
+}
+
+body {
+  background-color: mediumturquoise;
+}
+
+/*# sourceMappingURL=style.css.map */
