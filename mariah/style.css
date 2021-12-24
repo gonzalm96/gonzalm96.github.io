@@ -55,12 +55,13 @@ img{
 }
 
 .gift-description{
-    text-align: left;
+    
     padding: 0 50px;
 }
 
 .gift-description p, li{
     font-size: 36px;
+    text-align: left;
 }
 
 .disclaimer{
