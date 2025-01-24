@@ -259,18 +259,16 @@ img{
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     padding: 64px;
-    background: lime;
 }
 
 .contact{
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-end;
     padding: 64px;
-    background: #638475;
     color: #E6E1C5;
 }
 
@@ -284,15 +282,44 @@ img{
 }
 
 .section-left{
-    flex: 1 0 45%;
-    padding: 0 32px 0 0;
+    flex: 1 0 40%;
+    padding: 0 32px 0 0;    
 }
 
 .section-right{
-    flex: 1 0 45%;    
+    flex: 1 0 60%;  
 }
 
 .underline--brown{
     border-bottom: 3px solid #638475;    
     width: fit-content;
+}
+
+.underline--red{
+    border-bottom: 3px solid #ED6A5E;    
+    width: fit-content;
+}
+
+.project-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;    
+}
+
+.project-box:first-of-type{
+    margin-bottom: 32px;
+}
+
+.project-box{
+    position: relative;
+    border: 2px solid #ED6A5E;
+    flex: 0 1 27%;
+    height: 250px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
+.project-box:hover{
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
 }
