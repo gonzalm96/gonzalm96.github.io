@@ -203,6 +203,7 @@ img{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 0 0 0 120px;    
 }
@@ -214,10 +215,9 @@ img{
     justify-content: space-evenly;
 }
 
-.nav__contact{
-    background-color: #ED6A5E;
-    border: 2px solid #F39991;
-    border-radius: 4px;
+
+.nav__contact:hover{
+    background-color: #E6E1C5;
 }
 
 .link{
@@ -225,8 +225,25 @@ img{
     padding: 8px 16px;
     border-radius: 4px;
     color: #060622;
-    text-decoration: none;
-    border-bottom: 2px solid #E6E1C5;
+    text-decoration: none;    
+}
+
+.link__about{
+    display: inline-block;
+    background-color: #ED6A5E;
+    border: 2px solid #F39991;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 100%;
+    text-align: center;
+    color: #E6E1C5;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
+}
+
+
+.link__about:hover{
+    color: #ED6A5E;
+    background-color: #E6E1C5;
 }
 
 
