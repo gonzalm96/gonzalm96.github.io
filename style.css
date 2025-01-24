@@ -4,6 +4,15 @@ html, body{
 
 }
 
+.main-color{
+    background: #E6E1C5;
+}
+
+.fixed-width{
+    max-width: 1440px;
+    margin: auto;
+}
+
 .main-content{
     display: flex;
     position: absolute;
@@ -144,4 +153,129 @@ img{
     border: none;
     color: #FFFCE8;
     background-color: #D80032;
+}
+
+.nav-container{
+    display: flex;
+    flex-flow: flex-start;
+    align-items: center;
+    flex-direction: row nowrap;
+    padding: 32px 64px;
+}
+
+.logo{
+    flex: 1 0 auto;
+}
+
+.logo h1{
+    margin: 0
+}
+
+.logo h2{
+    margin: 4px 0 0;
+}
+
+.header--1{    
+    font: 2.98rem "Cardo", serif;
+}
+
+.header--2{
+    font: 2.5rem "Cardo", serif;
+}
+
+.header--3{
+    font: 2.07rem "Cardo", serif;
+}
+
+.header--4{
+    font: 1.7rem "Cardo", serif;
+}
+
+.header--5{
+    font: 1.44rem "Cardo", serif;
+}
+
+.italics{
+    font-style: italic;
+}
+
+.nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 0 120px;    
+}
+
+.nav__main{    
+    flex: 1 0 auto;
+    padding-right: 120px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav__contact{
+    background-color: #ED6A5E;
+    border: 2px solid #F39991;
+    border-radius: 4px;
+}
+
+.link{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #060622;
+    text-decoration: none;
+    border-bottom: 2px solid #E6E1C5;
+}
+
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 64px;    
+}
+
+.projects{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 64px;
+    background: lime;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 64px;
+    background: #638475;
+    color: #E6E1C5;
+}
+
+.contact a{
+    color: #E6E1C5;
+    text-decoration: none;
+}
+
+.contact a:hover{
+    text-decoration: underline;
+}
+
+.section-left{
+    flex: 1 0 45%;
+    padding: 0 32px 0 0;
+}
+
+.section-right{
+    flex: 1 0 45%;    
+}
+
+.underline--brown{
+    border-bottom: 3px solid #638475;    
+    width: fit-content;
 }

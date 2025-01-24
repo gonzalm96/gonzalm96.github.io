@@ -29,6 +29,10 @@ html{
         
 } 
 
+nav{
+    background-color: lime;
+}
+
 body{
     display: grid;
     grid-template-areas: 
@@ -40,6 +44,7 @@ body{
     margin: 0 auto;
     // border: $borderPurple;
     height:100%;
+    background-color: lime;
 }
 
 .areaOne{
@@ -133,8 +138,6 @@ body{
     }
     
 }
-
-
 
 .areaThree{
     grid-area: main-content;
