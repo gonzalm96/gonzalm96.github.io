@@ -269,6 +269,7 @@ img{
     flex-flow: row nowrap;
     align-items: flex-end;
     padding: 64px;
+    background-color: #638475;
     color: #E6E1C5;
 }
 
