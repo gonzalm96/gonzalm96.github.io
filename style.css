@@ -4,13 +4,18 @@ html, body{
 
 }
 
+main{
+    color: #081621;
+}
+
 .main-color{
-    background: #E6E1C5;
+    background: #FFEDC2;
 }
 
 .fixed-width{
     max-width: 1440px;
     margin: auto;
+    
 }
 
 .main-content{
@@ -160,6 +165,7 @@ img{
     flex-flow: flex-start;
     align-items: center;
     flex-direction: row nowrap;
+    justify-content: space-between;
     padding: 32px 64px;
 }
 
@@ -196,16 +202,24 @@ img{
 }
 
 .italics{
-    font-style: italic;
+    font-style: italic;    
+}
+
+.text-primary{
+    color: #040B10;
+}
+
+.text-decoration__none{
+    text-decoration: none;
 }
 
 .nav{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
-    padding: 0 0 0 120px;    
+    padding: 0 0 0 120px;       
 }
 
 .nav__main{    
@@ -217,33 +231,33 @@ img{
 
 
 .nav__contact:hover{
-    background-color: #E6E1C5;
+    background-color: #FFEDC2;
 }
 
 .link{
     display: inline-block;
-    padding: 8px 16px;
+    padding: 8px 16px;    
     border-radius: 4px;
-    color: #060622;
-    text-decoration: none;    
+    color: #040B10;
+    text-decoration: none;      
+    margin-left: 32px;  
 }
 
 .link__about{
     display: inline-block;
-    background-color: #ED6A5E;
-    border: 2px solid #F39991;
+    background-color: #FF5714;
+    border: 2px solid #FF9970;
     border-radius: 4px;
     padding: 8px 16px;
-    width: 100%;
+    width: calc(100% - 32px);
     text-align: center;
-    color: #E6E1C5;
+    color: #FFEDC2;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
 }
 
 
-.link__about:hover{
-    color: #ED6A5E;
-    background-color: #E6E1C5;
+.link__about:hover{       
+    background-color: #FF9970;
 }
 
 
@@ -251,16 +265,18 @@ img{
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex;
     padding: 64px;    
+}
+
+.about h2, .projects h2{
+    margin-top: 0;
 }
 
 .projects{
     display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    padding: 64px;
+    flex-flow: column nowrap;
+    padding: 64px 64px 120px;   
 }
 
 .contact{
@@ -269,12 +285,12 @@ img{
     flex-flow: row nowrap;
     align-items: flex-end;
     padding: 64px;
-    background-color: #638475;
-    color: #E6E1C5;
+    background-color: #FF5714;
+    color: #FFEDC2;
 }
 
 .contact a{
-    color: #E6E1C5;
+    color: #FFEDC2;
     text-decoration: none;
 }
 
@@ -288,23 +304,32 @@ img{
 }
 
 .section-right{
-    flex: 1 0 60%;  
+    flex: 1 0 60%;   
+}
+
+
+.section-right--image-container{
+    text-align: right;
+}
+
+.intro-image{
+    width: 85%;
+    height: auto;    
+    border-radius: 32px;
+    border: 3px solid #FF9970; 
+    background-color: #FF9970;
 }
 
 .underline--brown{
-    border-bottom: 3px solid #638475;    
+    border-bottom: 3px solid #FF9970;    
     width: fit-content;
 }
 
-.underline--red{
-    border-bottom: 3px solid #ED6A5E;    
-    width: fit-content;
-}
 
 .project-container{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;    
+    justify-content: space-between;     
 }
 
 .project-box:first-of-type{
@@ -313,14 +338,81 @@ img{
 
 .project-box{
     position: relative;
-    border: 2px solid #ED6A5E;
-    flex: 0 1 27%;
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    align-items: center;
+    flex: 0 1 30%;
     height: 250px;
     text-align: center;
-    border-radius: 4px;
-    padding: 0 8px;
+    border-radius: 8px;
+    padding: 0 8px;   
+    text-decoration: none;
+    color: #040B10;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
+    background-color: #DADDE7;
+    transition: flex 1s, box-shadow 1s;
+}
+
+.project-box--flappy{
+    background-image: url("images/flappy.png");
+    background-size: 100%;
+}
+
+.project-box--recs{
+    background-image: url("images/recs.png");
+    background-size: 100%;
+}
+
+.project-box--symply{
+    background-image: url("images/symply.png");
+    background-size: 100%;
+}
+
+.project-box--figma{
+    background-image: url("images/figma-1-logo-png-transparent.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.project-box--github{
+    background-image: url("images/git.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+/*make this display: flex; through js*/
+.overlay{
+    position: absolute;
+    display: flex;
+    justify-content: center;    
+    width: 100%;
+    height: 100%;
+    background: rgb(87,117,144);
+    background: linear-gradient(0deg, rgba(255,153,112,1) 0%, rgba(255,153,112,0) 100%);
+    transition: height 5s;
+    bottom: 0;
+}
+
+.overlay:hover{    
+    background: linear-gradient(0deg, rgba(255,153,112,1) 25%, rgba(255,153,112,0) 100%);
+    height: 0%;
 }
 
 .project-box:hover{
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 0px 35px -7px rgba(0,0,0,0.75);
+    flex: 0 1 32%;
+}
+
+.project-box--desc{
+    background-color: lime;
+    position: relative;
+    bottom: 0;    
+}
+
+/*This is the class that needs to get updated in JS*/
+.project-box-description{    
+    padding: 16px;
 }

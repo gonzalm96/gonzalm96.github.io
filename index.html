@@ -11,21 +11,18 @@
     <div class="nav-container">
         <div class="logo">
             <h1 class="header--1">Mario Gonzalez</h1>
-            <h2 class="italics header--4"> Email: <a href="mailto:mgonzalm96@gmail.com">mgonzalm96@gmail.com</a></h2>
+            <h2 class="italics header--4"> Email: <a href="mailto:mgonzalm96@gmail.com" class="text-primary text-decoration__none">mgonzalm96@gmail.com</a></h2>
         </div>
-        <div class="nav">
-                <div class="nav__main">
-                <a href="#projects" class="link link__projects header--5">Projects &amp; Past Work</a>                
-                <a href="#contact" class="link link__contact header--5">Contact</a>
-                </div>
-                <div class="nav__contact">
-                    <a href="/Marios_Resume.pdf" class="link link__about header--5">Resume</a>
-                </div>                  
+        <div class="nav">                
+            <a href="#projects" class="link link__projects header--5">Projects &amp; Past Work</a>                
+            <a href="#contact" class="link link__contact header--5">Contact</a>
+            <div class="nav__contact">
+                <a href="/Marios_Resume.pdf" class="link link__about header--5">Resume</a>                                                 
             </div>
         </div>
     </div>
 </header>
-<body class="main-color">
+<body class="fixed-width main-color">
     <main>
         <div class="about">
             <div class="section-left">
@@ -35,36 +32,67 @@
             <p class="header--5">My name is Mario and I am a highly motivated Front End developer with a heavy interest in UX/UI and design. When designing my ultimate goal is to create an interface that is not only visually appealing but also functional. Combining my experience in Front End developmnent with my knowledge in visual design, I aim to create practical and easily implemented designs.</p>
             <p class="header--5">Please take a look at my work below and don't hesitate to reach out with any question you may have!</p>
             </div>
-            <div class="section-right">
-                <img src="/jen-gift.png">
+            <div class="section-right section-right--image-container">
+                <img src="images/IMG_3690.png" class="intro-image" height="100px" width="100px">
             </div>
         </div>
         <div class="projects">
-            <div class="section-left">
-            <h2 id="projects" class="header--2 underline underline--red">
+            <div class="section-top">
+            <h2 id="projects" class="header--2 underline underline--brown">
                 Projects &amp; Past Work
             </h2>
             <p class="header--5">Check out some of my past work and personal projects!</p>
             </div>
-            <div class="section-right project-container">
-                <div class="project-box"><p>Flappy Trump</p>
-                <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+            <div class="section-bottom project-container">
+                <a href="/Flappy_Trump/flappyBird.html" class="project-box project-box--flappy">
+                    <div class="overlay">
+                        <div class="project-box--desc">
+                        <p class="header--5">Flappy Trump</p>
+                        <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                        </div>
+                    </div>
+                
+                </a>
+                <a href="Ed's_Recs/index.html" class="project-box project-box--recs">
+                    <div class="overlay">
+                        <div class="project-box--desc">
+                    <p class="header--5">Ed's Rec's</p>
+                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                    </div>
                 </div>
-                <div class="project-box"><p>Ed's Rec's</p>
-                <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                </a>
+                <a href="Symply/index.html" class="project-box project-box--symply">
+                    <div class="overlay">
+                        <div class="project-box--desc">
+                    <p class="header--5">Symply </br> (College project, 2020)</p>
+                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                    </div>
                 </div>
-                <div class="project-box"><p>Symply </br> (College project, 2020)</p>
-                <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                </a>
+                <a href="#" class="project-box">
+                    <div class="overlay">
+                        <div class="project-box--desc">
+                    <p class="header--5">Virtual Christmas Cards</p>
+                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                    </div>
                 </div>
-                <div class="project-box"><p>Virtual Christmas Cards</p>
-                <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                </a>
+                <a href="https://www.figma.com/@mariogonzalez4" class="project-box project-box--figma">
+                    <div class="overlay">
+                        <div class="project-box--desc">
+                    <p class="header--5">Figma Dashboard</p>
+                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                    </div>
                 </div>
-                <div class="project-box"><p>Figma Dashboard</p>
-                <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                </a>
+                <a href="https://github.com/gonzalm96?tab=repositories" class="project-box project-box--github">
+                    <div class="overlay">
+                        <div class="project-box--desc">
+                    <p class="header--5">Github</p>
+                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                    </div>
                 </div>
-                <div class="project-box"><p>Github</p>
-                <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
-                </div>
+                </a>
             </div>
         </div>
         <div class="contact">
@@ -72,7 +100,7 @@
             <h2 id="contact" class="header--2 underline underline--primary">
                 Contact:
             </h2>
-            <p class="header--5">If you would like to get in touch please feel free to reach out through any of links</p>
+            <p class="header--5">If you would like to get in touch please feel free to reach out through any of links below:</p>
             </div>
             <div class="section-right">
                 <p class="header--5">Email: <a href="mailto:mgonzalm96@gmail.com">mgonzalm96@gmail.com</a></p>
