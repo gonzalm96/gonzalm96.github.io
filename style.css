@@ -5,17 +5,16 @@ html, body{
 }
 
 main{
-    color: #081621;
+    color: #FFEDC2;
 }
 
 .main-color{
-    background: #FFEDC2;
+    background: #081621;
 }
 
 .fixed-width{
     max-width: 1440px;
-    margin: auto;
-    
+    padding: 0 64px;
 }
 
 .main-content{
@@ -166,7 +165,12 @@ img{
     align-items: center;
     flex-direction: row nowrap;
     justify-content: space-between;
-    padding: 32px 64px;
+    color: #FFEDC2;
+    background-color: lime;
+}
+
+.nav-container a{
+    color: #FFEDC2;
 }
 
 .logo{
@@ -217,9 +221,7 @@ img{
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    padding: 0 0 0 120px;       
+    align-items: center;     
 }
 
 .nav__main{    
@@ -229,18 +231,14 @@ img{
     justify-content: space-evenly;
 }
 
-
-.nav__contact:hover{
-    background-color: #FFEDC2;
-}
-
 .link{
     display: inline-block;
     padding: 8px 16px;    
     border-radius: 4px;
     color: #040B10;
     text-decoration: none;      
-    margin-left: 32px;  
+    margin-left: 32px;    
+    flex: 0 1 auto;
 }
 
 .link__about{
@@ -248,8 +246,7 @@ img{
     background-color: #FF5714;
     border: 2px solid #FF9970;
     border-radius: 4px;
-    padding: 8px 16px;
-    width: calc(100% - 32px);
+    padding: 8px 32px;
     text-align: center;
     color: #FFEDC2;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
@@ -266,7 +263,7 @@ img{
     justify-content: space-between;
     flex-flow: row nowrap;
     align-items: flex;
-    padding: 64px;    
+    padding: 64px 0;    
 }
 
 .about h2, .projects h2{
@@ -276,7 +273,7 @@ img{
 .projects{
     display: flex;
     flex-flow: column nowrap;
-    padding: 64px 64px 120px;   
+    padding: 64px 0 120px;   
 }
 
 .contact{
@@ -284,7 +281,7 @@ img{
     justify-content: space-between;
     flex-flow: row nowrap;
     align-items: flex-end;
-    padding: 64px;
+    padding: 64px 0;
     background-color: #FF5714;
     color: #FFEDC2;
 }
@@ -313,7 +310,7 @@ img{
 }
 
 .intro-image{
-    width: 85%;
+    width: 75%;
     height: auto;    
     border-radius: 32px;
     border: 3px solid #FF9970; 
@@ -348,7 +345,7 @@ img{
     border-radius: 8px;
     padding: 0 8px;   
     text-decoration: none;
-    color: #040B10;
+    color: #FFEDC2;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
     background-color: #DADDE7;
     transition: flex 1s, box-shadow 1s;
@@ -406,8 +403,7 @@ img{
     flex: 0 1 32%;
 }
 
-.project-box--desc{
-    background-color: lime;
+.project-box--desc{    
     position: relative;
     bottom: 0;    
 }
