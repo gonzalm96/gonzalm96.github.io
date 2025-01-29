@@ -15,6 +15,7 @@ main{
 .fixed-width{
     max-width: 1440px;
     padding: 0 64px;
+    margin: 0 auto;
 }
 
 .main-content{
@@ -161,12 +162,11 @@ img{
 
 .nav-container{
     display: flex;
-    flex-flow: flex-start;
+    flex-flow: row nowrap;
     align-items: center;
-    flex-direction: row nowrap;
     justify-content: space-between;
     color: #FFEDC2;
-    background-color: lime;
+    padding-top: 32px; 
 }
 
 .nav-container a{
@@ -178,31 +178,37 @@ img{
 }
 
 .logo h1{
-    margin: 0
+    margin: 0 0 12px;    
 }
 
 .logo h2{
     margin: 4px 0 0;
 }
 
-.header--1{    
-    font: 2.98rem "Cardo", serif;
+.header--1, h1{    
+    font: 54px "Catamaran", serif;
+    line-height: .75;
 }
 
-.header--2{
-    font: 2.5rem "Cardo", serif;
+.header--2, h2{
+    margin-top: 0;
+    font: 45px "Fira Sans Condensed", serif;
 }
 
-.header--3{
-    font: 2.07rem "Cardo", serif;
+.header--3, h3{
+    font: 37px "Fira Sans Condensed", serif;
 }
 
-.header--4{
-    font: 1.7rem "Cardo", serif;
+.header--4, h4{
+    font: 31px "Fira Sans Condensed", serif;
 }
 
-.header--5{
-    font: 1.44rem "Cardo", serif;
+.header--5, h5{
+    font: 26px "Fira Sans Condensed", serif;
+}
+
+p{
+    font: 18px "Metrophobic", serif;
 }
 
 .italics{
@@ -239,14 +245,15 @@ img{
     text-decoration: none;      
     margin-left: 32px;    
     flex: 0 1 auto;
+    font: 22px "Metrophobic", serif;
 }
 
 .link__about{
     display: inline-block;
-    background-color: #FF5714;
-    border: 2px solid #FF9970;
+    background-color: #F95738;
+    border: 2px solid #FCA587;
     border-radius: 4px;
-    padding: 8px 32px;
+    padding: 8px 24px;
     text-align: center;
     color: #FFEDC2;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
@@ -254,7 +261,8 @@ img{
 
 
 .link__about:hover{       
-    background-color: #FF9970;
+    background-color: #FCA587;
+    color: #081621;
 }
 
 
@@ -262,8 +270,8 @@ img{
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    align-items: flex;
-    padding: 64px 0;    
+    align-items: flex;     
+    padding-top: 64px;   
 }
 
 .about h2, .projects h2{
@@ -272,8 +280,9 @@ img{
 
 .projects{
     display: flex;
-    flex-flow: column nowrap;
-    padding: 64px 0 120px;   
+    flex-flow: column nowrap; 
+    padding-top: 80px;
+    padding-bottom: 120px;
 }
 
 .contact{
@@ -282,8 +291,15 @@ img{
     flex-flow: row nowrap;
     align-items: flex-end;
     padding: 64px 0;
-    background-color: #FF5714;
+    background-color: #F95738;
     color: #FFEDC2;
+}
+
+.contact-container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 64px;
 }
 
 .contact a{
@@ -296,12 +312,12 @@ img{
 }
 
 .section-left{
-    flex: 1 0 40%;
+    flex: 0 1 45%;
     padding: 0 32px 0 0;    
 }
 
 .section-right{
-    flex: 1 0 60%;   
+    flex: 0 1 45%;   
 }
 
 
@@ -310,15 +326,15 @@ img{
 }
 
 .intro-image{
-    width: 75%;
+    width: 90%;
     height: auto;    
     border-radius: 32px;
-    border: 3px solid #FF9970; 
-    background-color: #FF9970;
+    border: 3px solid #FCA587; 
+    background-color: #FCA587;
 }
 
 .underline--brown{
-    border-bottom: 3px solid #FF9970;    
+    border-bottom: 3px solid #FCA587;    
     width: fit-content;
 }
 
@@ -326,11 +342,14 @@ img{
 .project-container{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;     
+    justify-content: flex-start;
 }
 
-.project-box:first-of-type{
-    margin-bottom: 32px;
+
+.project-box:nth-of-type(3n-1){
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 16px;
 }
 
 .project-box{
@@ -339,7 +358,7 @@ img{
     flex-flow: column;
     justify-content: end;
     align-items: center;
-    flex: 0 1 30%;
+    flex: 0 1 31%;
     height: 250px;
     text-align: center;
     border-radius: 8px;
@@ -349,6 +368,7 @@ img{
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
     background-color: #DADDE7;
     transition: flex 1s, box-shadow 1s;
+    overflow: hidden;
 }
 
 .project-box--flappy{
@@ -366,7 +386,12 @@ img{
     background-size: 100%;
 }
 
+.project-box--xmas{
+    background-color: #F3F5F7;
+}
+
 .project-box--figma{
+    background-color: #F3F5F7;
     background-image: url("images/figma-1-logo-png-transparent.png");
     background-size: 25%;
     background-repeat: no-repeat;
@@ -374,6 +399,7 @@ img{
 }
 
 .project-box--github{
+    background-color: #F3F5F7;
     background-image: url("images/git.png");
     background-size: 60%;
     background-repeat: no-repeat;
@@ -386,29 +412,33 @@ img{
     display: flex;
     justify-content: center;    
     width: 100%;
-    height: 100%;
-    background: rgb(87,117,144);
-    background: linear-gradient(0deg, rgba(255,153,112,1) 0%, rgba(255,153,112,0) 100%);
-    transition: height 5s;
-    bottom: 0;
-}
-
-.overlay:hover{    
-    background: linear-gradient(0deg, rgba(255,153,112,1) 25%, rgba(255,153,112,0) 100%);
-    height: 0%;
+    height: 0;
+    background: rgb(255,237,194);    
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .project-box:hover{
     box-shadow: 0px 0px 35px -7px rgba(0,0,0,0.75);
-    flex: 0 1 32%;
+    /*flex: 0 1 32%;*/
 }
 
-.project-box--desc{    
+.project-box--desc{
     position: relative;
-    bottom: 0;    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: #081621;  
+    max-width: 284px;
+}
+
+.project-box--desc .header--5{
+    margin-bottom: 0;
 }
 
 /*This is the class that needs to get updated in JS*/
 .project-box-description{    
-    padding: 16px;
+    padding: 0 16px 0;
+    font-size: 1rem;
 }

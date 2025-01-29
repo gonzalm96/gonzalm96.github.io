@@ -6,107 +6,116 @@
     <title>Mario Gonzalez - Front End Developer and UX/UI Designer</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<header class="fixed-width main-color">
-    <div class="nav-container">
-        <div class="logo">
-            <h1 class="header--1">Mario Gonzalez</h1>
-            <h2 class="italics header--4"> Email: <a href="mailto:mgonzalm96@gmail.com" class="text-primary text-decoration__none">mgonzalm96@gmail.com</a></h2>
-        </div>
-        <div class="nav">                
-            <a href="#projects" class="link link__projects header--5">Projects &amp; Past Work</a>                
-            <a href="#contact" class="link link__contact header--5">Contact</a>
-            <div class="nav__contact">
-                <a href="/Marios_Resume.pdf" class="link link__about header--5">Resume</a>                                                 
+
+<body class="main-color">
+    <header class="fixed-width">
+        <div class="nav-container">
+            <div class="logo">
+                <h1 class="italics header--1">Mario Gonzalez</h1>
+                <h2 class="header--5"> Email: <a href="mailto:mgonzalm96@gmail.com" class="text-primary text-decoration__none">mgonzalm96@gmail.com</a></h2>
+            </div>
+            <div class="nav">                
+                <a href="#projects" class="link link__projects">Projects &amp; Past Work</a>                
+                <a href="#contact" class="link link__contact">Contact</a>
+                <div class="nav__contact">
+                    <a href="/Marios_Resume.pdf" class="link link__about">Resume</a>                                                 
+                </div>
             </div>
         </div>
-    </div>
-</header>
-<body class="fixed-width main-color">
+    </header>
     <main>
-        <div class="about">
+        <div class="about fixed-width">
             <div class="section-left">
             <h2 class="header--2 underline underline--brown">
                 Howdy!
             </h2>
-            <p class="header--5">My name is Mario and I am a highly motivated Front End developer with a heavy interest in UX/UI and design. When designing my ultimate goal is to create an interface that is not only visually appealing but also functional. Combining my experience in Front End developmnent with my knowledge in visual design, I aim to create practical and easily implemented designs.</p>
-            <p class="header--5">Please take a look at my work below and don't hesitate to reach out with any question you may have!</p>
+            <p>My name is Mario and I am a highly motivated Front End developer with a heavy interest in UX/UI and design. When designing my ultimate goal is to create an interface that is not only visually appealing but also functional. Combining my experience in Front End developmnent with my knowledge in visual design, I aim to create practical and easily implemented designs.</p>
+            <p>Please take a look at my work below and don't hesitate to reach out with any question you may have!</p>
             </div>
             <div class="section-right section-right--image-container">
                 <img src="images/IMG_3690.png" class="intro-image" height="100px" width="100px">
             </div>
         </div>
-        <div class="projects">
+        <div class="projects fixed-width">
             <div class="section-top">
             <h2 id="projects" class="header--2 underline underline--brown">
                 Projects &amp; Past Work
-            </h2>
-            <p class="header--5">Check out some of my past work and personal projects!</p>
+            </h2>            
             </div>
             <div class="section-bottom project-container">
-                <a href="/Flappy_Trump/flappyBird.html" class="project-box project-box--flappy">
-                    <div class="overlay">
-                        <div class="project-box--desc">
-                        <p class="header--5">Flappy Trump</p>
-                        <p class="project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                <a id="figma" href="https://www.figma.com/@mariogonzalez4" class="project-box project-box--figma">
+                    <div id="figma-desc" class="overlay">
+                        <div  class="project-box--desc">
+                            <p class="header--5">Figma Dashboard</p>
+                            <p class="header--6 project-box-description">Feel free to take a look at my past designs I have been tasked with creating.</p>
                         </div>
                     </div>
-                
                 </a>
-                <a href="Ed's_Recs/index.html" class="project-box project-box--recs">
-                    <div class="overlay">
-                        <div class="project-box--desc">
-                    <p class="header--5">Ed's Rec's</p>
-                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                <a id="github" href="https://github.com/gonzalm96?tab=repositories" class="project-box project-box--github">
+                    <div id="git-desc" class="overlay">
+                        <div  class="project-box--desc">
+                            <p class="header--5">Github</p>
+                            <p class="header--6 project-box-description">Check out my repo for all of my projects outlined.</p>
+                        </div>
                     </div>
-                </div>
                 </a>
-                <a href="Symply/index.html" class="project-box project-box--symply">
-                    <div class="overlay">
-                        <div class="project-box--desc">
-                    <p class="header--5">Symply </br> (College project, 2020)</p>
-                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                <!--<a id="xmas" href="#" class="project-box project-box--xmas">
+                    <div id="xmas-desc" class="overlay">
+                        <div  class="project-box--desc">
+                            <p class="header--5">Virtual Christmas Cards</p>
+                            <p class="header--6 project-box-description">Personalized virtual giftcards to have something to "open".</p>
+                        </div>
                     </div>
-                </div>
+                </a>-->
+                <a id="flappy" href="/Flappy_Trump/flappyBird.html" class="project-box project-box--flappy">
+                    <div id="flappy-desc" class="overlay">
+                        <div  class="project-box--desc">
+                            <p class="header--5">Flappy Trump</p>
+                            <p class="project-box-description">Flappy Bird clone with a politcal theme associated with. Currently rebuilding in React.</p>
+                        </div>
+                    </div>
                 </a>
-                <a href="#" class="project-box">
-                    <div class="overlay">
+                <a id="recs" href="Ed's_Recs/index.html" class="project-box project-box--recs">
+                    <div id="recs-desc"  class="overlay">
                         <div class="project-box--desc">
-                    <p class="header--5">Virtual Christmas Cards</p>
-                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                            <p class="header--5">Ed's Rec's</p>
+                            <p class="header--6 project-box-description">Blog-esque approach to music recommendations with an embedded playlist that is updated regularly with new music. Currently designing new iteration of this user interface.</p>
+                        </div>
                     </div>
-                </div>
                 </a>
-                <a href="https://www.figma.com/@mariogonzalez4" class="project-box project-box--figma">
-                    <div class="overlay">
-                        <div class="project-box--desc">
-                    <p class="header--5">Figma Dashboard</p>
-                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
+                <a id="symply" href="Symply/index.html" class="project-box project-box--symply">
+                    <div id="symply-desc" class="overlay">
+                        <div  class="project-box--desc">
+                            <p class="header--5">Symply <br> (College project, 2020)</p>
+                            <p  class="header--6 project-box-description">Final presentation website for a college class geared for building a mobile application designed to help people track their symptoms from their chronic illness.</p>
+                        </div>
                     </div>
-                </div>
-                </a>
-                <a href="https://github.com/gonzalm96?tab=repositories" class="project-box project-box--github">
-                    <div class="overlay">
-                        <div class="project-box--desc">
-                    <p class="header--5">Github</p>
-                    <p class="header--6 project-box-description">This is where the short description for each project is going to pop into on tile hover</p>
-                    </div>
-                </div>
                 </a>
             </div>
         </div>
         <div class="contact">
+            <div class="contact-container">
             <div class="section-left">
             <h2 id="contact" class="header--2 underline underline--primary">
                 Contact:
             </h2>
-            <p class="header--5">If you would like to get in touch please feel free to reach out through any of links below:</p>
+            <p>If you would like to get in touch please feel free to reach out through any of links below:</p>
             </div>
             <div class="section-right">
-                <p class="header--5">Email: <a href="mailto:mgonzalm96@gmail.com">mgonzalm96@gmail.com</a></p>
-                <p class="header--5">Instagram: <a href="#">@mgorgonzola</a></p>                
+                <p>Email: <a href="mailto:mgonzalm96@gmail.com">mgonzalm96@gmail.com</a></p>
+                <p>Instagram: <a href="#">@mgorgonzola</a></p>                
             </div>
+        </div>
         </div>
     </main>
 </body>
+
+<script src="animations.js"></script>
 </html>
