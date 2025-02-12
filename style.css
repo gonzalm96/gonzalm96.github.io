@@ -345,10 +345,14 @@ p{
     max-width: 1440px;
     margin: 0 auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 0 32px;
 =======
     padding: 0 16px;
 >>>>>>> a82e015d (Adjusting contact section padding to conform with)
+=======
+    padding: 0 32px;
+>>>>>>> 4b739cb0 (Updating the padding one more time)
 
     @media(min-width: 500px){
         padding: 0 64px;
