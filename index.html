@@ -18,12 +18,12 @@
     <header class="fixed-width">
         <div class="nav-container">
             <div class="logo">
-                <h1 class="italics header--1">Mario Gonzalez</h1>
-                <h2 class="header--5"> Email: <a href="mailto:mgonzalm96@gmail.com" class="text-primary text-decoration__none">mgonzalm96@gmail.com</a></h2>
+                <h1 class="header--1">Mario Gonzalez</h1>
+                <h2 class="italics header--5"> Email: <a href="mailto:mgonzalm96@gmail.com" class="text-primary text-decoration__none">mgonzalm96@gmail.com</a></h2>
             </div>
             <div class="nav">                
-                <a href="#projects" class="link link__projects">Projects &amp; Past Work</a>                
-                <a href="#contact" class="link link__contact">Contact</a>
+                <a href="#projects" class="link link__projects hide--mobile">Projects &amp; Past Work</a>                
+                <a href="#contact" class="link link__contact hide--mobile">Contact</a>
                 <div class="nav__contact">
                     <a href="/Marios_Resume.pdf" class="link link__about">Resume</a>                                                 
                 </div>
@@ -36,23 +36,27 @@
             <h2 class="header--2 underline underline--brown">
                 Howdy!
             </h2>
+            <div class="hide--desktop hide--tablet section-right--image-container">
+                <img src="images/IMG_3690.png" class="intro-image" height="100px" width="100px">
+            </div>
             <p>My name is Mario and I am a highly motivated Front End developer with a heavy interest in UX/UI and design. When designing my ultimate goal is to create an interface that is not only visually appealing but also functional. Combining my experience in Front End developmnent with my knowledge in visual design, I aim to create practical and easily implemented designs.</p>
             <p>Please take a look at my work below and don't hesitate to reach out with any question you may have!</p>
             </div>
-            <div class="section-right section-right--image-container">
+            <div class=" hide--mobile section-right section-right--image-container">
                 <img src="images/IMG_3690.png" class="intro-image" height="100px" width="100px">
             </div>
         </div>
         <div class="projects fixed-width">
             <div class="section-top">
             <h2 id="projects" class="header--2 underline underline--brown">
-                Projects &amp; Past Work
+                Projects &amp; Past&nbsp;Work
             </h2>            
             </div>
             <div class="section-bottom project-container">
                 <a id="figma" href="https://www.figma.com/@mariogonzalez4" class="project-box project-box--figma">
                     <div id="figma-desc" class="overlay">
-                        <div  class="project-box--desc">
+                        <div class="project-box-image project-box-image--figma"></div>
+                        <div class="project-box--desc">
                             <p class="header--5">Figma Dashboard</p>
                             <p class="header--6 project-box-description">Feel free to take a look at my past designs I have been tasked with creating.</p>
                         </div>
@@ -60,7 +64,8 @@
                 </a>
                 <a id="github" href="https://github.com/gonzalm96?tab=repositories" class="project-box project-box--github">
                     <div id="git-desc" class="overlay">
-                        <div  class="project-box--desc">
+                        <div class="project-box-image project-box-image--github"></div>
+                        <div class="project-box--desc">
                             <p class="header--5">Github</p>
                             <p class="header--6 project-box-description">Check out my repo for all of my projects outlined.</p>
                         </div>
@@ -76,7 +81,8 @@
                 </a>-->
                 <a id="flappy" href="/Flappy_Trump/flappyBird.html" class="project-box project-box--flappy">
                     <div id="flappy-desc" class="overlay">
-                        <div  class="project-box--desc">
+                        <div class="project-box-image project-box-image--flappy"></div>
+                        <div class="project-box--desc">
                             <p class="header--5">Flappy Trump</p>
                             <p class="project-box-description">Flappy Bird clone with a politcal theme associated with. Currently rebuilding in React.</p>
                         </div>
@@ -84,17 +90,19 @@
                 </a>
                 <a id="recs" href="https://www.edsrecs.com/" class="project-box project-box--recs">
                     <div id="recs-desc"  class="overlay">
+                        <div class="project-box-image project-box-image--recs"></div>
                         <div class="project-box--desc">
                             <p class="header--5">Ed's Rec's</p>
-                            <p class="header--6 project-box-description">Blog-esque approach to music recommendations with an embedded playlist that is updated regularly with new music. Currently designing new iteration of this user interface.</p>
+                            <p class="header--6 project-box-description">Blog-esque approach to music recommendations. Embedded playlist is updated regularly with new music. Currently designing new iteration of this user interface.</p>
                         </div>
                     </div>
                 </a>
                 <a id="symply" href="Symply/index.html" class="project-box project-box--symply">
                     <div id="symply-desc" class="overlay">
-                        <div  class="project-box--desc">
-                            <p class="header--5">Symply <br> (College project, 2020)</p>
-                            <p  class="header--6 project-box-description">Final presentation website for a college class geared for building a mobile application designed to help people track their symptoms from their chronic illness.</p>
+                        <div class="project-box-image project-box-image--symply"></div>
+                        <div class="project-box--desc">
+                            <p class="header--5">Symply </p>
+                            <p  class="header--6 project-box-description">College project from 2020, final presentation website for a college class geared for building a mobile application designed to help people track their symptoms from their chronic illness.</p>
                         </div>
                     </div>
                 </a>

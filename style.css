@@ -14,8 +14,12 @@ main{
 
 .fixed-width{
     max-width: 1440px;
-    padding: 0 64px;
+    padding: 0 16px;
     margin: 0 auto;
+
+    @media (min-width: 500px){
+        padding: 0 64px;
+    }
 }
 
 .main-content{
@@ -161,12 +165,16 @@ img{
 }
 
 .nav-container{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
     color: #FFEDC2;
-    padding-top: 32px; 
+    padding-top: 48px;
+
+    @media (min-width: 500px){
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 32px; 
+    }
 }
 
 .nav-container a{
@@ -185,30 +193,50 @@ img{
     margin: 4px 0 0;
 }
 
-.header--1, h1{    
-    font: 54px "Catamaran", serif;
+.header--1, h1{
+    font: 42px "Catamaran", serif;
     line-height: .75;
+
+    @media(min-width: 500px){
+        font: 54px "Catamaran", serif;        
+    }
 }
 
 .header--2, h2{
-    margin-top: 0;
-    font: 45px "Fira Sans Condensed", serif;
+    font: 35px "Fira Sans Condensed", serif;
+    @media(min-width: 500px){
+        margin-top: 0;
+        font: 45px "Fira Sans Condensed", serif;
+    }
 }
 
 .header--3, h3{
-    font: 37px "Fira Sans Condensed", serif;
+    font: 29px "Fira Sans Condensed", serif;
+        @media(min-width: 500px){
+        font: 37px "Fira Sans Condensed", serif;
+    }
 }
 
 .header--4, h4{
-    font: 31px "Fira Sans Condensed", serif;
+    font: 24px "Fira Sans Condensed", serif;
+        @media(min-width: 500px){
+        font: 31px "Fira Sans Condensed", serif;
+    }
 }
 
 .header--5, h5{
-    font: 26px "Fira Sans Condensed", serif;
+    font: 20px "Fira Sans Condensed", serif;
+        @media(min-width: 500px){
+        font: 26px "Fira Sans Condensed", serif;
+    }
 }
 
 p{
-    font: 18px "Metrophobic", serif;
+    font: 14px "Metrophobic", serif;
+
+    @media(min-width: 500px){
+        font: 18px "Metrophobic", serif;
+    }
 }
 
 .italics{
@@ -223,11 +251,16 @@ p{
     text-decoration: none;
 }
 
-.nav{
+.nav{    
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;     
+    justify-content: flex-start;
+    align-items: center; 
+    margin-top: 32px;
+    
+    @media(min-width: 500px){
+        justify-content: flex-end;
+    }
 }
 
 .nav__main{    
@@ -242,10 +275,13 @@ p{
     padding: 8px 16px;    
     border-radius: 4px;
     color: #040B10;
-    text-decoration: none;      
-    margin-left: 32px;    
+    text-decoration: none;
     flex: 0 1 auto;
     font: 22px "Metrophobic", serif;
+    
+    @media(min-width: 500px){
+        margin-left: 32px;         
+    }
 }
 
 .link__about{
@@ -269,9 +305,14 @@ p{
 .about{
     display: flex;
     justify-content: space-between;
-    flex-flow: row nowrap;
+    flex-flow: column;
     align-items: flex;     
-    padding-top: 64px;   
+    padding-top: 48px;
+    
+    @media(min-width: 500px){
+        flex-flow: row nowrap;
+        padding-top: 64px;
+    }
 }
 
 .about h2, .projects h2{
@@ -281,8 +322,12 @@ p{
 .projects{
     display: flex;
     flex-flow: column nowrap; 
-    padding-top: 80px;
+    padding-top: 48px;
     padding-bottom: 120px;
+
+    @media(min-width: 500px){
+        padding-top: 80px;
+    }
 }
 
 .contact{
@@ -313,7 +358,10 @@ p{
 
 .section-left{
     flex: 0 1 45%;
-    padding: 0 32px 0 0;    
+
+    @media(min-width: 500px){
+        padding: 0 32px 0 0;    
+    }
 }
 
 .section-right{
@@ -326,11 +374,15 @@ p{
 }
 
 .intro-image{
-    width: 90%;
+    width: 100%;
     height: auto;    
     border-radius: 32px;
     border: 3px solid #FCA587; 
     background-color: #FCA587;
+
+    @media(min-width: 500px){
+        width: 90%;
+    }
 }
 
 .underline--brown{
@@ -345,61 +397,87 @@ p{
     justify-content: flex-start;
 }
 
-
-.project-box:nth-of-type(3n-1){
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 16px;
+@media(min-width: 500px){
+    .project-box:nth-of-type(3n-1){
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 16px;
+    }
 }
 
 .project-box{
     position: relative;
+    margin-bottom: 16px;
     display: flex;
     flex-flow: column;
     justify-content: end;
     align-items: center;
-    flex: 0 1 31%;
+    flex: 0 1 100%;
     height: 250px;
-    text-align: center;
     border-radius: 8px;
     padding: 0 8px;   
     text-decoration: none;
     color: #FFEDC2;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
-    background-color: #DADDE7;
     transition: flex 1s, box-shadow 1s;
     overflow: hidden;
+
+    @media(min-width: 500px){
+        flex: 0 1 31%;
+        text-align: center;
+    }
 }
 
-.project-box--flappy{
+@media(max-width: 499px){
+    .project-box-image{
+        position: absolute;
+        height: 100%;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        display: block;    
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(2px);
+        transition: filter .5s ease-in-out;
+    }
+
+    .overlay:hover .project-box-image{
+        filter: blur(20px);
+    }
+}
+
+.project-box--flappy, .project-box-image--flappy{
     background-image: url("images/flappy.png");
     background-size: 100%;
 }
 
-.project-box--recs{
+.project-box--recs, .project-box-image--recs{
     background-image: url("images/recs.png");
     background-size: 100%;
 }
 
-.project-box--symply{
+.project-box--symply, .project-box-image--symply{
     background-image: url("images/symply.png");
     background-size: 100%;
 }
 
-.project-box--xmas{
+.project-box--xmas, .project-box-image--xmas{
     background-color: #F3F5F7;
 }
 
-.project-box--figma{
-    background-color: #F3F5F7;
+.project-box--figma, .project-box-image--figma{
+    background-color: #848FA5;
     background-image: url("images/figma-1-logo-png-transparent.png");
     background-size: 25%;
     background-repeat: no-repeat;
     background-position: 50%;
 }
 
-.project-box--github{
-    background-color: #F3F5F7;
+.project-box--github, .project-box-image--github{
+    background-color: #848FA5;
     background-image: url("images/git.png");
     background-size: 60%;
     background-repeat: no-repeat;
@@ -410,12 +488,17 @@ p{
 .overlay{
     position: absolute;
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    height: 100%;  
     width: 100%;
-    height: 0;
-    background: rgb(255,237,194);    
-    border-radius: 8px;
+
     overflow: hidden;
+
+    @media(min-width: 500px){
+        background: rgb(255,237,194);
+        height: 0;
+        border-radius: 8px;
+    }
 }
 
 .project-box:hover{
@@ -427,18 +510,38 @@ p{
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    color: #081621;  
-    max-width: 284px;
+    justify-content: flex-end;
+    background: linear-gradient(0deg, rgba(255,237,194,1) 50%, rgba(255,237,194,0) 100%);
+    
+    color: #081621;
+    padding: 0 16px;
+
+    @media(min-width: 500px){
+        max-width: 284px;
+        align-items: center;
+        background: none;
+        justify-content: center;
+    }
 }
 
 .project-box--desc .header--5{
     margin-bottom: 0;
 }
 
-/*This is the class that needs to get updated in JS*/
-.project-box-description{    
-    padding: 0 16px 0;
-    font-size: 1rem;
+.hide--mobile{
+    @media (max-width:499px){
+        display: none;
+    } 
+}
+
+.hide--tablet{
+    @media (min-width: 500px) and (max-width:1199px){
+        display: none;
+    }
+}
+
+.hide--desktop{
+    @media (min-width: 1200px){
+        display: none;
+    }
 }
