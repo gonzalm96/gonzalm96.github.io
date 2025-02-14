@@ -132,6 +132,12 @@ body {
 .stack-small > * + * {
   margin-top: 1.25rem;
 }
+
+button.stack-small:hover{
+  background-color: #FFEDAD;
+  cursor: pointer;
+}
+
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
@@ -149,23 +155,19 @@ body {
 /* End global styles */
 /* General app styles */
 .todoapp {
-  background: #fff;
+  background: #2E282A;
   box-shadow:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
-  margin: 2rem 0 4rem 0;
+  margin: 2rem 0 0 0;
   padding: 1rem;
   position: relative;
+  border-radius: 16px;
 }
-@media screen and (min-width: 550px) {
-  .todoapp {
-    padding: 4rem;
-  }
-}
+
 .todoapp > * {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50rem;
+  margin-left: 32px;
+  margin-right: 32px;  
 }
 .todoapp > form {
   max-width: 100%;
@@ -211,7 +213,22 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  box-shadow: 0px -5px 23px 0px rgba(0,0,0,0.75);
+  background-color: #ffdc5e;
+  border-radius: 8px 8px 0 0;
+  padding: 32px 16px 32px;
+  transition: padding 1s;
 }
+
+.todo.closed:not(:first-of-type){
+  margin-top: -15px;
+}
+
+.todo.closed:hover, .todo.open{
+  padding: 32px 16px 48px;
+}
+
+
 .todo > * {
   flex: 0 0 100%;
 }
@@ -226,7 +243,7 @@ body {
 }
 /* End todo item styles */
 /* Checkbox styles */
-.c-cb {
+/* .c-cb {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   clear: left;
@@ -238,8 +255,8 @@ body {
   min-height: 44px;
   padding-left: 40px;
   position: relative;
-}
-.c-cb > label::before,
+} */
+/* .c-cb > label::before,
 .c-cb > input[type="checkbox"] {
   box-sizing: border-box;
   height: 44px;
@@ -289,8 +306,27 @@ body {
   top: 11px;
   transform: rotate(-45deg);
   width: 18px;
-}
+} */
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
+}
+/*mario addition*/
+.openItem{
+  display: inline-block;  
+}
+/*mario addition*/
+.closedItem{
+  display: none;  
+}
+/*mario addition*/
+.todo-heading{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-heading:hover{
+  background-color: lime;
 }
 /* End checkbox styles */

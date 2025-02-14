@@ -1,0 +1,41 @@
+.canvas{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  overflow: hidden;
+}
+
+.birdy{
+  position: absolute;
+  border: 1px solid #000000;
+  padding: 10px;
+  border-radius: 50%;
+  padding: 24px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  transition: top .1s ease-in-out;
+}
+
+.birdy p{
+  margin: 0;
+}
+
+.column{
+  position: absolute;
+  border: 1px solid #000000;  
+  transition: left .1s ease-out;
+}
+
+.column--top{
+  background: white;
+  top: 0;
+}
+
+.column--bottom{
+  background: lime;
+  bottom: 0;
+}
+

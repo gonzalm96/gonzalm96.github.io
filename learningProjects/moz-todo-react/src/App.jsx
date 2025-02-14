@@ -76,7 +76,7 @@ function App(props) {
       <h2 id="list-heading">{headingText}</h2>
       <ul
         role="list"
-        className="todo-list stack-large stack-exception"
+        className="todo-list stack-exception"
         aria-labelledby="list-heading">
         {taskList}
       </ul>
