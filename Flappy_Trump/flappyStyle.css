@@ -1,10 +1,10 @@
 canvas{
-    width: 320px;
+    width: 352px;
     height: 480px;
     margin: 0 auto; 
-    background-image:url("blueBackground.png"); 
+    background:#003559; 
     display: none; 
-    border:4px solid goldenrod;
+    border: 8px solid #F9C80E;
 }
 
 .classContainer{
@@ -23,26 +23,26 @@ canvas{
     justify-content: center;
     align-items: center;
     margin: auto; 
+    padding: 0 16px;
     height: 480px;
     width: 320px;
     background-color:#003559; 
-    border:4px solid goldenrod;
-    color:#D71D36;
+    border: 8px solid #F9C80E;
+    color:#BF0A30;
 }
 
 .firstTitle{
     grid-area: title;
     font-size: 3.25em;
     text-align: center;
-    -webkit-text-stroke:.35px #ffffff;
+    
 }
 
 .secondTitle{
     grid-area: title;
     font-size: 3.25em;
     margin-top:50%;
-    text-align: center;
-    -webkit-text-stroke:.35px #ffffff;
+    text-align: center;    
 }
 
 .inspirational_quote{
@@ -50,6 +50,7 @@ canvas{
     position: relative;
     flex-direction: column;
     margin:auto;
+    padding-top: 32px;
     grid-area: quote;
     width:100%;
 }
@@ -72,18 +73,30 @@ canvas{
     font-size: 1.75em;
 }
 
+.score__value{
+    text-align: center;
+    margin-bottom: 0;
+}
+
 .startButton{
     grid-area: play;
     position: relative;
-    height:100%;
+    width: 100%;
     border-radius: 2%;
     margin:auto;
+    text-align: center;
 }
 
 .startButton button{
-    color: #000000;
-    background-color: #F3A712;
-    border-radius: 2%;
-    height:25px;
-    font-size: 1em;
+    color: #003559;
+    background-color: #ffff;
+    border: 2px solid #F9C80E;
+    border-radius: 4px;
+    font-size: 1.05em;
+    padding: 8px 12px;
+}
+
+.startButton button:hover{
+    background: #F9C80E;
+    cursor: pointer;
 }

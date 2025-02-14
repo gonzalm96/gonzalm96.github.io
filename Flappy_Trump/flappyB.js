@@ -7,7 +7,7 @@ var startPositionY = canvas.height/2;
 var birdHeight = 40;
 
 //difference that the bird falls each frame draw
-var fallingDeltaY = -4;
+var fallingDeltaY = -3.5;
 var risingDeltaY = fallingDeltaY * 1.5;
 var deltaX = -2;
 
@@ -30,11 +30,7 @@ var runGame = true;
 var spacePressed = false;
 var barTouched = false;
 
-//keep score, each pipe crossed will be 10 points
-var score = 0;
-var highScore = 0;
-var pipesPassed = 0;
-var numPresses = 0;
+
 
 //function to get all the values ready and in place at the start of each game
 function setGame(){
@@ -69,6 +65,7 @@ function drawBird(){
     // //cntxt.rect(startPositionX-20, startPositionY,birdHeight-10,birdHeight-10);
     // cntxt.fillStyle = "gold";
     // cntxt.fill();
+    console.log("drawing bird")
     cntxt.drawImage(image, startPositionX, startPositionY, 40,40);
     cntxt.closePath();
 }
@@ -83,9 +80,9 @@ function drawUpperRectangles(){
     for(var i = 0; i < numPipes; i++){
         //console.log("in this loop");
         cntxt.beginPath();
-        cntxt.fillStyle = "red";
+        cntxt.fillStyle = "#ffffff";
         cntxt.fillRect(upperPipes[i].x, 0, 30, upperPipes[i].height);
-        cntxt.fillStyle = "white";
+        cntxt.fillStyle = "#BF0A30";
         cntxt.font = "16pt sans-serif";
         var calcOffset = upperPipes[i].height / 4;
         cntxt.fillText("F", upperPipes[i].x + 7.5, calcOffset - 10);
@@ -132,9 +129,9 @@ function drawBottomRectangles() {
         cntxt.beginPath();
         bottomPipes[i].height = canvas.height - (upperPipes[i].height + birdHeight + 60);
         
-        cntxt.fillStyle = "red";
+        cntxt.fillStyle = "#ffffff";
         cntxt.fillRect(bottomPipes[i].x, canvas.height - bottomPipes[i].height, 30, bottomPipes[i].height);
-        cntxt.fillStyle = "white";
+        cntxt.fillStyle = "#BF0A30";
         cntxt.font = "16pt sans-serif";
         var calcOffset = (bottomPipes[i].height) / 4;
         cntxt.fillText("F", bottomPipes[i].x + 7.5, (canvas.height - bottomPipes[i].height)  + (calcOffset) - 10);
@@ -203,11 +200,9 @@ function drawGame(){
     if(spacePressed == true){
         startPositionY += risingDeltaY * 1.5;
     }
-    //----------Game Functionality----------//
-    console.log("right before if statement");
+    //----------Game Functionality----------//    
     //request a frame and have draw call itself to render
-    if(runGame){
-        console.log("in the if statement")
+    if(runGame){        
         requestAnimationFrame(drawGame);
     }
 }
@@ -230,10 +225,17 @@ function drawFactsTop(x, y){
 //change handlers to be for key click on canvas and finger touch on phone screen
 document.addEventListener("keydown", keyDownHandler,false);
 document.addEventListener("keyup", keyUpHandler, false);
+document.getElementById("#gameWindow").addEventListener("touchStart", touchDownHandler, false);
+
 
 //canvas.addEventListener("mousedown", keyDownHandler, false);
 //canvas.addEventListener("mouseup", keyUpHandler, false);
 
+function touchDownHandler(e){    
+        spacePressed = true;
+        numPresses++;
+        console.log("space pressed");    
+}
 
 function keyDownHandler(e){
     if(e.key == " " || e.key == "Space"){
