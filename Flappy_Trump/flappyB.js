@@ -30,6 +30,9 @@ var runGame = true;
 var spacePressed = false;
 var barTouched = false;
 
+var highScore = 0;
+var score = 0;
+
 
 
 //function to get all the values ready and in place at the start of each game
@@ -225,24 +228,19 @@ function drawFactsTop(x, y){
 //change handlers to be for key click on canvas and finger touch on phone screen
 document.addEventListener("keydown", keyDownHandler,false);
 document.addEventListener("keyup", keyUpHandler, false);
-document.getElementById("#gameWindow").addEventListener("touchStart", touchDownHandler, false);
-
+document.addEventListener("touchstart", keyDownHandler, false);
+document.addEventListener("touchend", keyUpHandler, false);
 
 //canvas.addEventListener("mousedown", keyDownHandler, false);
 //canvas.addEventListener("mouseup", keyUpHandler, false);
 
-function touchDownHandler(e){    
-        spacePressed = true;
-        numPresses++;
-        console.log("space pressed");    
-}
 
 function keyDownHandler(e){
-    if(e.key == " " || e.key == "Space"){
+    
         spacePressed = true;
         numPresses++;
         console.log("space pressed");
-    }
+    
 }
 
 function keyUpHandler(e){
