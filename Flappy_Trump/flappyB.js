@@ -278,6 +278,14 @@ function endGame(index){
 }
 
 function startGame(){
+    if(highScore === 0){
+        if(window.innerWidth > 499){
+            alert("Press the space bar to tell lies and avoid as many facts as possible!");
+        } else{
+            alert("Touch the screen to tell lies and avoid as many facts as possible!");
+        }
+    } 
+
     setGame();
     document.getElementById('startMenu').style = "display:none";
     canvas.style = "display:block";
