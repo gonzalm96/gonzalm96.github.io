@@ -5,11 +5,11 @@ html, body{
 }
 
 main{
-    color: #FFEDC2;
+    color: #F0F4EF;
 }
 
 .main-color{
-    background: #081621;
+    background: #171D26;
 }
 
 .fixed-width{
@@ -165,7 +165,7 @@ img{
 }
 
 .nav-container{
-    color: #FFEDC2;
+    color: #F0F4EF;
     padding-top: 48px;
 
     @media (min-width: 500px){
@@ -174,11 +174,12 @@ img{
         align-items: center;
         justify-content: space-between;
         padding-top: 32px; 
+        margin-bottom: 32px;
     }
 }
 
 .nav-container a{
-    color: #FFEDC2;
+    color: #F0F4EF;
 }
 
 .logo{
@@ -186,7 +187,8 @@ img{
 }
 
 .logo h1{
-    margin: 0 0 12px;    
+    margin: 0 0 12px;   
+    line-height: 1;
 }
 
 .logo h2{
@@ -260,6 +262,7 @@ p{
     
     @media(min-width: 500px){
         justify-content: flex-end;
+        margin-top: 0px;
     }
 }
 
@@ -291,7 +294,7 @@ p{
     border-radius: 4px;
     padding: 8px 24px;
     text-align: center;
-    color: #FFEDC2;
+    color: #F0F4EF;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
 }
 
@@ -337,22 +340,14 @@ p{
     align-items: flex-end;
     padding: 64px 0;
     background-color: #F95738;
-    color: #FFEDC2;
+    color: #F0F4EF;
 }
 
 .contact-container{
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
     padding: 0 32px;
-=======
-    padding: 0 16px;
->>>>>>> a82e015d (Adjusting contact section padding to conform with)
-=======
-    padding: 0 32px;
->>>>>>> 4b739cb0 (Updating the padding one more time)
 
     @media(min-width: 500px){
         padding: 0 64px;
@@ -360,7 +355,7 @@ p{
 }
 
 .contact a{
-    color: #FFEDC2;
+    color: #F0F4EF;
     text-decoration: none;
 }
 
@@ -388,9 +383,10 @@ p{
 .intro-image{
     width: 100%;
     height: auto;    
-    border-radius: 32px;
-    border: 3px solid #FCA587; 
-    background-color: #FCA587;
+    border-radius: 18px;
+    background-color: #263140;
+    border: 3px solid #2D3442; 
+    box-shadow: 0px 0px 8px 0px rgba(67,75,94,1);
 
     @media(min-width: 500px){
         width: 90%;
@@ -398,7 +394,7 @@ p{
 }
 
 .underline--brown{
-    border-bottom: 3px solid #FCA587;    
+    border-bottom: 3px solid #F95738;    
     width: fit-content;
 }
 
@@ -429,15 +425,18 @@ p{
     border-radius: 8px;
     padding: 0 8px;   
     text-decoration: none;
-    color: #FFEDC2;
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.33);
-    transition: flex 1s, box-shadow 1s;
+    color: #F0F4EF;
+    box-shadow: 0px 0px 8px 0px rgba(67,75,94,1);
     overflow: hidden;
 
     @media(min-width: 500px){
         flex: 0 1 31%;
         text-align: center;
     }
+}
+
+.project-box:hover{
+    box-shadow: 0px 0px 14px 0px rgba(67,75,94,1);
 }
 
 @media(max-width: 499px){
@@ -458,6 +457,7 @@ p{
 
     .overlay:hover .project-box-image{
         filter: blur(20px);
+        box-shadow: 0px 0px 14px 0px rgba(67,75,94,1);
     }
 }
 
@@ -477,11 +477,11 @@ p{
 }
 
 .project-box--xmas, .project-box-image--xmas{
-    background-color: #F3F5F7;
+    background-color: #434B5E;
 }
 
 .project-box--figma, .project-box-image--figma{
-    background-color: #848FA5;
+    background-color: #434B5E;
     background-image: url("images/figma-1-logo-png-transparent.png");
     background-size: 25%;
     background-repeat: no-repeat;
@@ -489,7 +489,7 @@ p{
 }
 
 .project-box--github, .project-box-image--github{
-    background-color: #848FA5;
+    background-color: #434B5E;
     background-image: url("images/git.png");
     background-size: 60%;
     background-repeat: no-repeat;
@@ -507,15 +507,9 @@ p{
     overflow: hidden;
 
     @media(min-width: 500px){
-        background: rgb(255,237,194);
+        background: #434B5E;
         height: 0;
-        border-radius: 8px;
     }
-}
-
-.project-box:hover{
-    box-shadow: 0px 0px 35px -7px rgba(0,0,0,0.75);
-    /*flex: 0 1 32%;*/
 }
 
 .project-box--desc{
@@ -525,7 +519,7 @@ p{
     justify-content: flex-end;
     background: linear-gradient(0deg, rgba(255,237,194,1) 50%, rgba(255,237,194,0) 100%);
     
-    color: #081621;
+    color: #F0F4EF;
     padding: 0 16px;
 
     @media(min-width: 500px){
