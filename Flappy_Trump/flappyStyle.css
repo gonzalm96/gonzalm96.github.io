@@ -1,6 +1,6 @@
 
 @media(max-width: 480px){
-    html{
+    * {
         touch-action: manipulation;
     }
 }
