@@ -84,14 +84,14 @@ function drawUpperRectangles(){
         //console.log("in this loop");
         cntxt.beginPath();
         cntxt.fillStyle = "#ffffff";
-        cntxt.fillRect(upperPipes[i].x, 0, 30, upperPipes[i].height);
+        cntxt.fillRect(upperPipes[i].x, 0, 40, upperPipes[i].height);
         cntxt.fillStyle = "#BF0A30";
-        cntxt.font = "16pt sans-serif";
+        cntxt.font = "14pt sans-serif";
         var calcOffset = upperPipes[i].height / 4;
-        cntxt.fillText("F", upperPipes[i].x + 7.5, calcOffset - 10);
-        cntxt.fillText("A", upperPipes[i].x + 7.5, (calcOffset * 2) - 10);
-        cntxt.fillText("C", upperPipes[i].x + 7.5, (calcOffset * 3) - 10);
-        cntxt.fillText("T", upperPipes[i].x + 7.5, (calcOffset * 4) - 10);
+        cntxt.fillText("F", upperPipes[i].x + 12.5, calcOffset - 10);
+        cntxt.fillText("A", upperPipes[i].x + 12.5, (calcOffset * 2) - 10);
+        cntxt.fillText("C", upperPipes[i].x + 12.5, (calcOffset * 3) - 10);
+        cntxt.fillText("T", upperPipes[i].x + 12.5, (calcOffset * 4) - 10);
         cntxt.fill();
         
         //check to see if the pipe has passed the bird and mark it as scored
@@ -105,8 +105,8 @@ function drawUpperRectangles(){
         
 
         // upperPipes[i].x - 15 < startPositionX < upperPipes[i].x + 15 
-        if(upperPipes[i].x > startPositionX - 15
-            && startPositionX + 15 > upperPipes[i].x
+        if(upperPipes[i].x > startPositionX - 40
+            && startPositionX + 40 > upperPipes[i].x
             && startPositionY < upperPipes[i].height
             && upperPipes[i].status == 1) {
             endGame(i);
@@ -130,25 +130,24 @@ function drawBottomRectangles() {
     for (var i = 0; i < numPipes; i++) {
         //console.log("in this loop");
         cntxt.beginPath();
-        bottomPipes[i].height = canvas.height - (upperPipes[i].height + birdHeight + 60);
+        bottomPipes[i].height = canvas.height - (upperPipes[i].height + birdHeight + 80);
         
         cntxt.fillStyle = "#ffffff";
-        cntxt.fillRect(bottomPipes[i].x, canvas.height - bottomPipes[i].height, 30, bottomPipes[i].height);
+        cntxt.fillRect(bottomPipes[i].x, canvas.height - bottomPipes[i].height, 40, bottomPipes[i].height);
         cntxt.fillStyle = "#BF0A30";
-        cntxt.font = "16pt sans-serif";
+        cntxt.font = "14pt sans-serif";
         var calcOffset = (bottomPipes[i].height) / 4;
-        cntxt.fillText("F", bottomPipes[i].x + 7.5, (canvas.height - bottomPipes[i].height)  + (calcOffset) - 10);
-        cntxt.fillText("A", bottomPipes[i].x + 7.5, (canvas.height - bottomPipes[i].height)  + (calcOffset * 2) - 10);
-        cntxt.fillText("C", bottomPipes[i].x + 7.5, (canvas.height - bottomPipes[i].height)  + (calcOffset * 3) - 10);
-        cntxt.fillText("T", bottomPipes[i].x + 7.5, (canvas.height - bottomPipes[i].height)  + (calcOffset * 4) - 10);
+        cntxt.fillText("F", bottomPipes[i].x + 12.5, (canvas.height - bottomPipes[i].height)  + (calcOffset) - 10);
+        cntxt.fillText("A", bottomPipes[i].x + 12.5, (canvas.height - bottomPipes[i].height)  + (calcOffset * 2) - 10);
+        cntxt.fillText("C", bottomPipes[i].x + 12.5, (canvas.height - bottomPipes[i].height)  + (calcOffset * 3) - 10);
+        cntxt.fillText("T", bottomPipes[i].x + 12.5, (canvas.height - bottomPipes[i].height)  + (calcOffset * 4) - 10);
         cntxt.fill();
         
         //drawFacts(bottomPipes[i].x, bottomPipes[i].height);
         cntxt.closePath();
         
-
-        if (bottomPipes[i].x > startPositionX - 15
-            && startPositionX + 15 > bottomPipes[i].x
+        if (bottomPipes[i].x > startPositionX - 40
+            && startPositionX + 40 > bottomPipes[i].x
             && startPositionY >= canvas.height - bottomPipes[i].height - 35
             && bottomPipes[i].status == 1) {
             endGame(i);
@@ -230,9 +229,6 @@ document.addEventListener("keydown", keyDownHandler,false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("touchstart", keyDownHandler, false);
 document.addEventListener("touchend", keyUpHandler, false);
-
-//canvas.addEventListener("mousedown", keyDownHandler, false);
-//canvas.addEventListener("mouseup", keyUpHandler, false);
 
 
 function keyDownHandler(e){

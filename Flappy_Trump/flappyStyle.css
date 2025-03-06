@@ -5,6 +5,10 @@ canvas{
     background:#003559; 
     display: none; 
     border: 8px solid #F9C80E;
+    
+    @media(max-width: 480px){
+        touch-action: manipulation;
+    }
 }
 
 .classContainer{
@@ -41,7 +45,7 @@ canvas{
 .secondTitle{
     grid-area: title;
     font-size: 3.25em;
-    margin-top:50%;
+    margin-top:66%;
     text-align: center;    
 }
 
