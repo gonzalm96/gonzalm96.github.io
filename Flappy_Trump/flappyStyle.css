@@ -1,3 +1,10 @@
+
+@media(max-width: 480px){
+    html{
+        touch-action: manipulation;
+    }
+}
+
 canvas{
     width: 352px;
     height: 480px;
@@ -5,10 +12,6 @@ canvas{
     background:#003559; 
     display: none; 
     border: 8px solid #F9C80E;
-    
-    @media(max-width: 480px){
-        touch-action: manipulation;
-    }
 }
 
 .classContainer{
