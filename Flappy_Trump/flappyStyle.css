@@ -1,8 +1,5 @@
-
-@media(max-width: 480px){
-    * {
-        touch-action: manipulation;
-    }
+html, * {
+    touch-action: manipulation;
 }
 
 canvas{
