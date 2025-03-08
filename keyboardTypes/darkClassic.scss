@@ -1,22 +1,14 @@
-$keyWidth: 38px;
-$keyHeight: 38px;
+$keyWidth: 45px;
+$keyHeight: 45px;
 
-// $pageColor: #AB3428;
-$pageColor: #AB3428;
-// $keyboardColor: #89B6A5;
-$keyboardColor: #294C60;
-$keyColor: #F4C015;
-$keyBorder: #001B2E;
-$keyTextColor: #011638;
+$pageColor: #3D7068;
+$keyColor: #000000;
+$keyTextColor: #F0F7EE;
 
 $KeyColorPressed: #7E7F83;
 
-.body{
-    background-color: $pageColor;
-}
-
 .keyboard{
-    background-color: $keyboardColor;
+    background-color: black;
     display: flex;
     flex-flow: row nowrap;
     width: 80%;
@@ -24,13 +16,7 @@ $KeyColorPressed: #7E7F83;
     max-width: 1140px;    
     padding: 16px;
     border-radius: 8px;
-    border: 2px solid $keyBorder;
-
-    &__main{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-    }
+    border: 1px solid $keyTextColor;
 
     &__secondary{
         display: flex;
@@ -46,39 +32,21 @@ $KeyColorPressed: #7E7F83;
     margin: 8px;
     text-transform: uppercase;
     text-align: center;
-    border: 3px solid $keyBorder;
+    border: 1px solid $keyTextColor;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 6px;
+
     font-size: 12px;
     background-color: $keyColor;
     color: $keyTextColor;
 
-    &__1{
-        width: 60px;
-        border-radius: 6px;
-    }
-    &__2{
-        width: 80px;
-        border-radius: 6px;
-    }
-    &__3{
-        width: 100px;
-        border-radius: 6px;
-    }
-    &__4{
-        width: 120px;
-        border-radius: 6px;
-    }
-    
-    &__space{
-        flex: 1 0 33%;
-        border-radius: 6px;
-    }  
+    &__1{width: 60px;}
+    &__2{width: 80px;}
+    &__3{width: 100px;}
+    &__4{width: 120px;}
+    &__space{flex: 1 0 33%;}  
 
     &__small-text{
         font-size: 8px;
@@ -124,11 +92,10 @@ $KeyColorPressed: #7E7F83;
     }
     &[class*="__up"]{
         transform: rotate(-45deg);
-        margin-bottom: 6px;
     }
     &[class*="__down"]{
         transform: rotate(135deg);
-        margin-top: 6px;
+        margin-top: 4px;
     }
 }
 

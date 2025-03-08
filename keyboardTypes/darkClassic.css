@@ -1,9 +1,5 @@
-.body {
-  background-color: #AB3428;
-}
-
 .keyboard {
-  background-color: #294C60;
+  background-color: black;
   display: flex;
   flex-flow: row nowrap;
   width: 80%;
@@ -11,12 +7,7 @@
   max-width: 1140px;
   padding: 16px;
   border-radius: 8px;
-  border: 2px solid #001B2E;
-}
-.keyboard__main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  border: 1px solid #F0F7EE;
 }
 .keyboard__secondary {
   display: flex;
@@ -26,42 +17,34 @@
 }
 
 .key {
-  width: 38px;
-  height: 38px;
+  width: 45px;
+  height: 45px;
   margin: 8px;
   text-transform: uppercase;
   text-align: center;
-  border: 3px solid #001B2E;
+  border: 1px solid #F0F7EE;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 6px;
   font-size: 12px;
-  background-color: #F4C015;
-  color: #011638;
+  background-color: #000000;
+  color: #F0F7EE;
 }
 .key__1 {
   width: 60px;
-  border-radius: 6px;
 }
 .key__2 {
   width: 80px;
-  border-radius: 6px;
 }
 .key__3 {
   width: 100px;
-  border-radius: 6px;
 }
 .key__4 {
   width: 120px;
-  border-radius: 6px;
 }
 .key__space {
   flex: 1 0 33%;
-  border-radius: 6px;
 }
 .key__small-text {
   font-size: 8px;
@@ -76,7 +59,7 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #011638;
+  color: #F0F7EE;
   box-sizing: border-box;
   padding: 5px;
   width: 10px;
@@ -106,17 +89,16 @@
 }
 .arrow[class*=__up] {
   transform: rotate(-45deg);
-  margin-bottom: 6px;
 }
 .arrow[class*=__down] {
   transform: rotate(135deg);
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .window-lines {
   width: 20px;
-  border-top: 1px solid #011638;
-  border-bottom: 1px solid #011638;
+  border-top: 1px solid #F0F7EE;
+  border-bottom: 1px solid #F0F7EE;
 }
 
-/*# sourceMappingURL=typeWriter.css.map */
+/*# sourceMappingURL=darkClassic.css.map */

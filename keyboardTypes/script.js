@@ -5,7 +5,7 @@ let keyPressedColor = '#7E7F83';
 let keyBaseColor = '#000000';
 
 function setColorVariables(styleSheet){
-    if(styleSheet == "style.css"){        
+    if(styleSheet == "darkClassic.css"){        
         keyPressedColor = '#7E7F83';
         keyBaseColor = '#000000';
     }else if(styleSheet == "typeWriter.css"){        
