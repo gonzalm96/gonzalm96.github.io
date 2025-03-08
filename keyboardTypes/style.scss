@@ -15,7 +15,13 @@ html, body{
 body{
     background: $pageColor;     
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;    
+    justify-content: space-evenly;
+}
+
+h1{
+    text-align: center;
 }
 
 p{
@@ -30,8 +36,7 @@ p{
     flex-flow: row nowrap;
     width: 80%;
     min-height: 275px;
-    max-width: 1140px;
-    margin: auto;
+    max-width: 1140px;    
     padding: 16px;
     border-radius: 8px;
     border: 1px solid $keyTextColor;

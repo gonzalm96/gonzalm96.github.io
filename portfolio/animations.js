@@ -55,6 +55,14 @@ jQuery(document).ready(function() {
                     $("#git-desc").animate({height: 0}, 300);       
                 }
             );
+            $("#keyboards").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#keyboards-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#keyboards-desc").animate({height: 0}, 300);       
+                }
+            );
         }
     }
     resizeForm();

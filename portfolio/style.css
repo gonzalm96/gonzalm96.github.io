@@ -507,6 +507,18 @@ p{
     background-position: 50%;
 }
 
+.project-box--keyboard, .project-box-image--keyboard{
+    background-color: #171D26;
+    @media(min-width: 500px){
+        background: #434B5E;
+        background-image: url("../images/keys.png");
+    }
+
+    background-size: 225%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
 .project-box--github, .project-box-image--github{
     background-color: #171D26;
     @media(min-width: 500px){
