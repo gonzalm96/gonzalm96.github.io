@@ -1,25 +1,34 @@
-$keyWidth: 45px;
-$keyHeight: 45px;
+$keyWidth: 38px;
+$keyHeight: 38px;
 
-$pageColor: #3D7068;
-$keyColor: #000000;
-$keyTextColor: #F0F7EE;
+$pageColor: #92B4F4;
+$keyboardColor: #F9F9F9;
+$keyColor: #F9F9F9;
+$keyBorder: #EBEBEB;
+$keyTextColor: #001B2E;
+
+$keyAccentColor: #FF2E00;
 
 $KeyColorPressed: #7E7F83;
 
+body{
+    background-color: $pageColor;
+}
 
-
-.darkClassic{
-    display: block;
+.modernSpace{
+    display: none;
 
     p{
-        font-family: "Fira Sans Condensed", sans-serif;
+        font-family: "Tektur", sans-serif;
+        font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
+        font-variation-settings:
+        "wdth" 100;
     }
 
-    .darkClassic-board{
-        background-color: black;
+    .space-board{
+        background-color: $keyboardColor;
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
@@ -27,7 +36,16 @@ $KeyColorPressed: #7E7F83;
         max-width: 1140px;    
         padding: 16px;
         border-radius: 8px;
-        border: 1px solid $keyTextColor;
+        border: 2px solid $keyBorder;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+        &__main{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+        }
 
         &__secondary{
             display: flex;
@@ -35,28 +53,45 @@ $KeyColorPressed: #7E7F83;
             justify-content: space-between;
             margin: 0 auto;
         }
-
         .key{
             width: $keyWidth;
             height: $keyHeight;
             margin: 8px;
             text-transform: uppercase;
             text-align: center;
-            border: 1px solid $keyTextColor;
+            border: 3px solid $keyBorder;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 6px;
-        
+            border-radius: 4px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
             font-size: 12px;
             background-color: $keyColor;
             color: $keyTextColor;
         
-            &__1{width: 60px;}
-            &__2{width: 80px;}
-            &__3{width: 100px;}
-            &__4{width: 120px;}
-            &__space{flex: 1 0 33%;}  
+            &__1{
+                width: 60px;
+                border-radius: 6px;
+            }
+            &__2{
+                width: 80px;
+                border-radius: 6px;
+            }
+            &__3{
+                width: 100px;
+                border-radius: 6px;
+            }
+            &__4{
+                width: 120px;
+                border-radius: 6px;
+            }
+            
+            &__space{
+                flex: 1 0 33%;
+                border-radius: 6px;
+            }  
         
             &__small-text{
                 font-size: 8px;
@@ -67,13 +102,19 @@ $KeyColorPressed: #7E7F83;
                 flex-flow: column nowrap;
                 justify-content: space-evenly;        
             }
+        
+            &__esc, &__arrow-accent{
+                background-color: $keyAccentColor;
+                color: $keyColor;
+                border-color: $keyAccentColor;
+            }
         }
         
         .arrow{
             position: relative;
             display: inline-block;
             vertical-align: middle;
-            color: $keyTextColor;
+            color: $keyColor;
             box-sizing: border-box;
             &:after, &:before {
                 content: "";
@@ -102,10 +143,11 @@ $KeyColorPressed: #7E7F83;
             }
             &[class*="__up"]{
                 transform: rotate(-45deg);
+                margin-bottom: 6px;
             }
             &[class*="__down"]{
                 transform: rotate(135deg);
-                margin-top: 4px;
+                margin-top: 6px;
             }
         }
         
@@ -116,3 +158,4 @@ $KeyColorPressed: #7E7F83;
         }
     }
 }
+

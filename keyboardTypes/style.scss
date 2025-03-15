@@ -7,6 +7,15 @@ $keyTextColor: #F0F7EE;
 
 $KeyColorPressed: #7E7F83;
 
+$darkThemeMain: #000000;
+$darkThemeText: #F0F7EE;
+
+$typeThemeMain: #F4C015;
+$typeThemeText: #011638;
+
+$spaceThemeMain: #FF2E00;
+$spaceThemeText: #F9F9F9;
+
 html, body{
     height: 100%;
     overflow: hidden;
@@ -22,12 +31,6 @@ body{
 
 h1{
     text-align: center;
-}
-
-p{
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-weight: 500;
-    font-style: normal;
 }
 
 .row{
@@ -54,5 +57,45 @@ p{
     &__group{
         display: flex;
         flex-flow: row nowrap;
+    }
+}
+
+.styleButton{
+    padding: 8px 16px;
+    font-size: 14px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 4px;
+
+    &__dark{
+        background-color: $darkThemeMain;
+        border: 2px solid $darkThemeText;
+        color: $darkThemeText;
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    &__typeWriter{
+        background-color: $typeThemeMain;
+        border: 2px solid $typeThemeText;
+        color: $typeThemeText;
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    &__space{
+        background-color: $spaceThemeMain;
+        border: 2px solid $spaceThemeText;
+        color: $spaceThemeText;
+        font-family: "Tektur", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+        "wdth" 100;
     }
 }

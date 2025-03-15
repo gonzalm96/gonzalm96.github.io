@@ -15,12 +15,6 @@ h1 {
   text-align: center;
 }
 
-p {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
 .row {
   display: flex;
   flex-flow: row nowrap;
@@ -43,6 +37,42 @@ p {
 .row-0__group {
   display: flex;
   flex-flow: row nowrap;
+}
+
+.styleButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 4px;
+}
+.styleButton__dark {
+  background-color: #000000;
+  border: 2px solid #F0F7EE;
+  color: #F0F7EE;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.styleButton__typeWriter {
+  background-color: #F4C015;
+  border: 2px solid #011638;
+  color: #011638;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.styleButton__space {
+  background-color: #FF2E00;
+  border: 2px solid #F9F9F9;
+  color: #F9F9F9;
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 /*# sourceMappingURL=style.css.map */
