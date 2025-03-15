@@ -37,6 +37,11 @@ body {
   justify-content: space-between;
   margin: 0 auto;
 }
+.modernSpace .space-board .row-special-keys .key {
+  background-color: #00538F;
+  border-color: #003C66;
+  color: #F9F9F9;
+}
 .modernSpace .space-board .key {
   width: 38px;
   height: 38px;

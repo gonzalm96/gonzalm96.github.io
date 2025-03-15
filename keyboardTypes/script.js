@@ -4,6 +4,9 @@ let keyBaseColor = '#000000';
 let accentPressedColor = '#CC2500';
 let accentBaseColor = '#FF2E00';
 
+let specialKeysPressed = '#003052';
+let specialKeysBase = '#00538F';
+
 const classicDark = document.getElementById("classicDark");
 const typeWriter = document.getElementById("typeWriter");
 const modernSpace = document.getElementById("modernSpace");
@@ -18,12 +21,12 @@ function setColorVariables(styleSheet){
         keyBaseColor = '#000000';
     }else if(styleSheet == "typeWriter.css"){        
         console.log("whats");   
-        keyPressedColor = '#C39809';
-        keyBaseColor = '#F4C015';
+        keyPressedColor = '#D3B25F';
+        keyBaseColor = '#F2E8CF';
     }
     else if(styleSheet == "modernSpace.css"){        
         console.log("whats");   
-        keyPressedColor = '#EBEBEB';
+        keyPressedColor = '#D6D6D6';
         keyBaseColor = '#F9F9F9';
     }
     console.log('ummm');
@@ -55,16 +58,15 @@ function changeKeyboard(keyboard){
 }
 
 function keyDownHandler(e){
-    console.log(e.key);
-    console.log("down handler");
-    console.log(keyPressedColor);
-    if(currentStyleSheet.id == "modernSpace" && (e.key == "Escape" || e.key == "Backspace" || e.key == " " || e.key == "ArrowUp" || e.key == "ArrowLeft" || e.key == "ArrowDown" || e.key == "ArrowUp" || e.key == "ArrowRight")){        
+    if(currentStyleSheet.id == "modernSpace" && (e.key == "Escape" || e.key == "Backspace" || e.key == " " || e.key == "ArrowUp" || e.key == "ArrowLeft" || e.key == "ArrowDown" || e.key == "ArrowUp" || e.key == "ArrowRight" || e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown")){        
         if(e.key == " "){
             document.getElementById("space-"+currentStyleSheet.id).style.backgroundColor = accentPressedColor; 
-        } else{
+        } else if(e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown"){
+            document.getElementById(e.key+"-"+currentStyleSheet.id).style.backgroundColor = specialKeysPressed; 
+        }  else{
             document.getElementById(e.key+"-"+currentStyleSheet.id).style.backgroundColor = accentPressedColor; 
         }        
-    }else{
+    } else{
         if(e.key == 'Shift'){
             document.getElementById("ShiftL-"+currentStyleSheet.id).style.backgroundColor = keyPressedColor;
             document.getElementById("ShiftR-"+currentStyleSheet.id).style.backgroundColor = keyPressedColor;    
@@ -85,12 +87,12 @@ function keyDownHandler(e){
 }
 
 function keyUpHandler(e){    
-    console.log(e.key);
-    console.log("up handler");
-    console.log(keyBaseColor);
-    if(currentStyleSheet.id == "modernSpace" && (e.key == "Escape" || e.key == "Backspace" || e.key == " " || e.key == "ArrowUp" || e.key == "ArrowLeft" || e.key == "ArrowDown" || e.key == "ArrowUp" || e.key == "ArrowRight")){        
+    console.log(e.key);    
+    if(currentStyleSheet.id == "modernSpace" && (e.key == "Escape" || e.key == "Backspace" || e.key == " " || e.key == "ArrowUp" || e.key == "ArrowLeft" || e.key == "ArrowDown" || e.key == "ArrowUp" || e.key == "ArrowRight" || e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown")){        
         if(e.key == " "){
             document.getElementById("space-"+currentStyleSheet.id).style.backgroundColor = accentBaseColor; 
+        } else if(e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown"){
+            document.getElementById(e.key+"-"+currentStyleSheet.id).style.backgroundColor = specialKeysBase; 
         } else{
             document.getElementById(e.key+"-"+currentStyleSheet.id).style.backgroundColor = accentBaseColor; 
         }        
@@ -118,9 +120,3 @@ currentStyleSheet = classicDark;
 console.log(currentStyleSheet.id);
 document.addEventListener("keydown", keyDownHandler,false);
 document.addEventListener("keyup", keyUpHandler,false);
-
-// console.log(classicDarkKeys.length);
-// console.log(typeWriterKeys.length);
-// console.log(modernSpaceKeys.length);
-
-// setColorVariables('style.css');

@@ -9,6 +9,9 @@ $keyTextColor: #001B2E;
 
 $keyAccentColor: #FF2E00;
 
+$specialKeysColor: #00538F;
+$specialKeysBorder: #003C66;
+
 $KeyColorPressed: #7E7F83;
 
 body{
@@ -52,6 +55,12 @@ body{
             flex-flow: column nowrap;
             justify-content: space-between;
             margin: 0 auto;
+        }
+
+        .row-special-keys .key{
+            background-color: $specialKeysColor;
+            border-color: $specialKeysBorder;
+            color: $keyColor;
         }
         .key{
             width: $keyWidth;
