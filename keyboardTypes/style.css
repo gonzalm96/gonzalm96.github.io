@@ -1,18 +1,35 @@
-html, body {
+html,
+body {
   height: 100%;
+  color: #F1F0EA;
   overflow: hidden;
 }
 
+.fixed-width {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 body {
-  background: #3D7068;
+  background: #36393B;
+}
+
+main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 h1 {
   text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .row {
@@ -39,13 +56,22 @@ h1 {
   flex-flow: row nowrap;
 }
 
+.changeStyles {
+  margin-bottom: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 12px;
+  justify-content: space-between;
+}
+
 .styleButton {
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 500;
   font-style: normal;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 .styleButton__dark {
   background-color: #000000;
@@ -55,14 +81,26 @@ h1 {
   font-weight: 500;
   font-style: normal;
 }
+.styleButton__dark:hover {
+  background-color: #F0F7EE;
+  border: 2px solid #000000;
+  color: #000000;
+  cursor: pointer;
+}
 .styleButton__typeWriter {
-  background-color: #F2E8CF;
-  border: 2px solid #011638;
-  color: #011638;
+  background-color: #3E4338;
+  border: 2px solid #F2E8CF;
+  color: #F2E8CF;
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+.styleButton__typeWriter:hover {
+  background-color: #F2E8CF;
+  border: 2px solid #3E4338;
+  color: #3E4338;
+  cursor: pointer;
 }
 .styleButton__space {
   background-color: #FF2E00;
@@ -73,6 +111,96 @@ h1 {
   font-weight: 500;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+}
+.styleButton__space:hover {
+  background-color: #F9F9F9;
+  border: 2px solid #FF2E00;
+  color: #FF2E00;
+  cursor: pointer;
+}
+
+.game-area {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 32px 0;
+}
+
+.match-box {
+  flex: 1 0 70%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.match-box__start {
+  text-align: center;
+}
+.match-box__start--string {
+  font-family: "Economica", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  letter-spacing: 0.5rem;
+}
+.match-box__solution {
+  text-align: center;
+}
+.match-box__solution--string {
+  height: 20px;
+  font-family: "Economica", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  letter-spacing: 0.5rem;
+}
+
+.game-interactive {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.game-interactive__boardContainer {
+  flex: 1 0 80%;
+  padding-right: 32px;
+}
+.game-interactive__aside {
+  flex: 0 1 15%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  color: #F1F0EA;
+  border-radius: 8px;
+  padding: 0 16px 8px;
+}
+
+.points-box {
+  flex: 0 1 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  padding-bottom: 16px;
+  border-bottom: 3px solid #F1F0EA;
+}
+.points-box__current-score {
+  font-size: 24px;
+  font-family: "Economica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.correct {
+  color: #F1F0EA;
+}
+
+.wrong {
+  color: #ED6A5A;
 }
 
 /*# sourceMappingURL=style.css.map */

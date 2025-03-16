@@ -11,10 +11,6 @@ $keyTextColor: #011638;
 
 $KeyColorPressed: #7E7F83;
 
-body{
-    background-color: $pageColor;
-}
-
 .typeWriter{
     display: none;
 
@@ -30,8 +26,7 @@ body{
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
-        min-height: 275px;
-        max-width: 1140px;    
+        min-height: 275px;           
         padding: 16px;
         border-radius: 8px;
         border: 2px solid $keyBorder;

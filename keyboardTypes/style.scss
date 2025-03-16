@@ -1,7 +1,9 @@
 $keyWidth: 45px;
 $keyHeight: 45px;
 
-$pageColor: #3D7068;
+$pageColor: #36393B;
+$textColor: #F1F0EA;
+$wrongTextColor: #ED6A5A;
 $keyColor: #000000;
 $keyTextColor: #F0F7EE;
 
@@ -11,83 +13,123 @@ $darkThemeMain: #000000;
 $darkThemeText: #F0F7EE;
 
 $typeThemeMain: #F2E8CF;
-$typeThemeText: #011638;
+$typeThemeText: #3E4338;
 
 $spaceThemeMain: #FF2E00;
 $spaceThemeText: #F9F9F9;
 
-html, body{
+html,
+body {
     height: 100%;
+    color: $textColor;
     overflow: hidden;
 }
 
-body{
-    background: $pageColor;     
+.fixed-width {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    background: $pageColor;
+}
+
+main {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;    
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
 }
 
-h1{
-    text-align: center;
+h1 {
+    text-align: center;    
 }
 
-.row{
-    display: flex;    
+h2 {
+    font-weight: 400;
+    font-size: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.row {
+    display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 0;
     height: $keyHeight + 10px;
 
-    &__arrows{
+    &__arrows {
         display: flex;
 
-        &--up{
+        &--up {
             justify-content: center;
         }
     }
 }
 
-.row-0{
+.row-0 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 18px;
 
-    &__group{
+    &__group {
         display: flex;
         flex-flow: row nowrap;
     }
 }
 
-.styleButton{
+.changeStyles {
+    margin-bottom: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 12px;
+    justify-content: space-between;
+}
+
+.styleButton {
     padding: 8px 16px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: "Fira Sans Condensed", sans-serif;
     font-weight: 500;
     font-style: normal;
     border-radius: 4px;
+    margin-bottom: 8px;
 
-    &__dark{
+    &__dark {
         background-color: $darkThemeMain;
         border: 2px solid $darkThemeText;
         color: $darkThemeText;
         font-family: "Fira Sans Condensed", sans-serif;
         font-weight: 500;
         font-style: normal;
+        
+        &:hover{
+            background-color: $darkThemeText;
+            border: 2px solid $darkThemeMain;
+            color: $darkThemeMain;
+            cursor: pointer;
+        }
     }
 
-    &__typeWriter{
-        background-color: $typeThemeMain;
-        border: 2px solid $typeThemeText;
-        color: $typeThemeText;
+    &__typeWriter {
+        background-color: $typeThemeText;
+        border: 2px solid $typeThemeMain;
+        color: $typeThemeMain;
         font-family: "Orbitron", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
+        
+        &:hover{
+            background-color: $typeThemeMain;  
+            border: 2px solid $typeThemeText;          
+            color: $typeThemeText;
+            cursor: pointer;
+        }
     }
 
-    &__space{
+    &__space {
         background-color: $spaceThemeMain;
         border: 2px solid $spaceThemeText;
         color: $spaceThemeText;
@@ -96,6 +138,105 @@ h1{
         font-weight: 500;
         font-style: normal;
         font-variation-settings:
-        "wdth" 100;
+            "wdth" 100;
+        
+            &:hover{
+                background-color: $spaceThemeText;  
+                border: 2px solid $spaceThemeMain;              
+                color: $spaceThemeMain;
+                cursor: pointer;
+            }
     }
+}
+
+.game-area {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 32px 0;
+}
+
+.match-box {
+    flex: 1 0 70%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__start {
+        text-align: center;
+
+        &--string {
+            font-family: "Economica", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 32px;
+            letter-spacing: .5rem;
+        }
+    }
+
+    &__solution {
+        text-align: center;
+
+        &--string {
+            height: 20px;
+            font-family: "Economica", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 32px;
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+.game-interactive{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;   
+    
+
+    &__boardContainer{
+        flex: 1 0 80%;
+        padding-right: 32px;     
+    }
+
+    &__aside{
+        flex: 0 1 15%; 
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;        
+        color: $textColor;
+        border-radius: 8px;  
+        padding: 0 16px 8px;   
+    }
+}
+
+.points-box {
+    flex: 0 1 25%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: fit-content;
+    padding-bottom: 16px;
+    border-bottom: 3px solid $textColor;
+
+    &__current-score{
+        font-size: 24px;
+        font-family: "Economica", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.correct {
+    color: $textColor;
+}
+
+.wrong {
+    color: $wrongTextColor;
 }

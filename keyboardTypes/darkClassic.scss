@@ -1,16 +1,16 @@
-$keyWidth: 45px;
-$keyHeight: 45px;
+$keyWidth: 38px;
+$keyHeight: 38px;
 
 $pageColor: #3D7068;
+$keyboardColor: #000000;
 $keyColor: #000000;
 $keyTextColor: #F0F7EE;
+$keyBorder: #F0F7EE;
 
 $KeyColorPressed: #7E7F83;
 
-
-
 .darkClassic{
-    display: block;
+    display: flex;
 
     p{
         font-family: "Fira Sans Condensed", sans-serif;
@@ -19,15 +19,17 @@ $KeyColorPressed: #7E7F83;
     }
 
     .darkClassic-board{
-        background-color: black;
+        background-color: $keyboardColor;
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
-        min-height: 275px;
-        max-width: 1140px;    
+        min-height: 275px;            
         padding: 16px;
         border-radius: 8px;
-        border: 1px solid $keyTextColor;
+        border: 2px solid $keyBorder;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 
         &__secondary{
             display: flex;
@@ -42,7 +44,7 @@ $KeyColorPressed: #7E7F83;
             margin: 8px;
             text-transform: uppercase;
             text-align: center;
-            border: 1px solid $keyTextColor;
+            border: 2px solid $keyTextColor;
             display: flex;
             align-items: center;
             justify-content: center;
