@@ -13,6 +13,7 @@ const modernSpace = document.getElementById("modernSpace");
 
 const highScoreElement = document.getElementById("highScore");
 const currentScoreElement = document.getElementById("currentScore");
+const failureMessage = document.getElementById("failure-message");
 
 
 let matchString = document.getElementById("match-string");
@@ -125,6 +126,7 @@ function resetGame(){
     matchStringSolution.innerHTML = '';
     points = 0;
     currentScoreElement.innerHTML = points;
+    failureMessage.style.visibility = "hidden";
     getRandomString(5);
 }
 
@@ -146,6 +148,7 @@ function keyDownHandler(e) {
             document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = accentPressedColor;
             if(!checkString(e.key)){
                 gameOver = true;
+                failureMessage.style.visibility = "visible";  
             }
         }
     } else {
@@ -172,7 +175,8 @@ function keyDownHandler(e) {
         else {
             document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
             if(!checkString(e.key)){
-                gameOver = true;                
+                gameOver = true;
+                failureMessage.style.visibility = "visible";                
             }
         }
     }
