@@ -27,9 +27,10 @@ let points = 0;
 let solution = '';
 let gameOver = false;
 
+let charSet;
+
 function getRandomString(difficulty) {
     let newMatchString = '';
-    const charSet = 'abcdefghijklmnopqrsatuvwxyz';
 
     for (let i = 0; i < difficulty; i++) {
         newMatchString += charSet.charAt(Math.floor(Math.random() * charSet.length));
@@ -40,12 +41,12 @@ function getRandomString(difficulty) {
 
 function checkString(key) {
     let nextLetter = document.createElement('span');
-    nextLetter.innerText = key;
+    nextLetter.innerText = key[0];
 
-    if (matchString.innerText.charAt(solution.length) == key) {
+    if (matchString.innerText.charAt(solution.length) == key[0] && !gameOver) {
         nextLetter.classList.add("correct");
         matchStringSolution.appendChild(nextLetter);
-        solution += key;
+        solution += key[0];
 
         if(solution.length == matchString.innerText.length){
             checkSolution();
@@ -56,7 +57,7 @@ function checkString(key) {
     else {
         nextLetter.classList.add("wrong");
         matchStringSolution.appendChild(nextLetter);
-        solution += key;
+        solution += key[0];
         return false;
     }
 
@@ -118,6 +119,8 @@ function changeKeyboard(keyboard) {
         typeWriter.style.display = 'none';
         classicDark.style.display = 'none';
     }
+
+    setEvents();
 }
 
 function resetGame(){
@@ -130,51 +133,59 @@ function resetGame(){
     getRandomString(5);
 }
 
-function keyDownHandler(e) {
+function keyDownHandler(e) {  
+    console.log("pressed");  
+    let charPressed = '';
+    if(isMobile()){
+        console.log(e.target.id);
+        charPressed = e.target.id;
+    } else { console.log(e);
+        charPressed = e.key; }
 
-    if (currentStyleSheet.id == "modernSpace" && (e.key == "Escape" || e.key == "Backspace" || e.key == " " || e.key == "ArrowUp" || e.key == "ArrowLeft" || e.key == "ArrowDown" || e.key == "ArrowUp" || e.key == "ArrowRight" || e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown")) {
-        if (e.key == " ") {
+    if (currentStyleSheet.id == "modernSpace" && (charPressed == "Escape" || charPressed == "Backspace" || charPressed == " " || charPressed == "ArrowUp" || charPressed == "ArrowLeft" || charPressed == "ArrowDown" || charPressed == "ArrowUp" || charPressed == "ArrowRight" || charPressed == "Help" || charPressed == "Home" || charPressed == "PageUp" || charPressed == "Delete" || charPressed == "End" || charPressed == "PageDown")) {
+        if (charPressed == " ") {
             document.getElementById("space-" + currentStyleSheet.id).style.backgroundColor = accentPressedColor;
             if(gameOver){
                 resetGame();
             }            
-        } else if (e.key == "Backspace") {
+        } else if (charPressed == "Backspace") {
             document.getElementById(currentStyleSheet.id).style.backgroundColor = accentPressedColor;
             removeLastChar();
         }
-        else if (e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown") {
-            document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = specialKeysPressed;
+        else if (charPressed == "Help" || charPressed == "Home" || charPressed == "PageUp" || charPressed == "Delete" || charPressed == "End" || charPressed == "PageDown") {
+            document.getElementById(charPressed + "-" + currentStyleSheet.id).style.backgroundColor = specialKeysPressed;
         } else {
-            document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = accentPressedColor;
-            if(!checkString(e.key)){
+            document.getElementById(charPressed + "-" + currentStyleSheet.id).style.backgroundColor = accentPressedColor;
+            if(!checkString(charPressed)){
                 gameOver = true;
                 failureMessage.style.visibility = "visible";  
             }
         }
     } else {
-        if (e.key == 'Shift') {
+        if (charPressed == 'Shift') {
             document.getElementById("ShiftL-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
             document.getElementById("ShiftR-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
-        } else if (e.key == 'Control') {
+        } else if (charPressed == 'Control') {
             document.getElementById("ControlL-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
             document.getElementById("ControlR-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
-        } else if (e.key == 'Alt') {
+        } else if (charPressed == 'Alt') {
             document.getElementById("AltL-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
             document.getElementById("AltR-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
         }
-        else if (e.key == " ") {
+        else if (charPressed == " " || charPressed == "space-"+currentStyleSheet.id) {
             document.getElementById("space-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
             if(gameOver){
                 resetGame();
             }         
         }
-        else if (e.key == "Backspace") {
-            document.getElementById(currentStyleSheet.id).style.backgroundColor = accentPressedColor;
+        else if (charPressed == "Backspace") {
+            //document.getElementById(currentStyleSheet.id).style.backgroundColor = accentPressedColor;
             removeLastChar();
         }
         else {
-            document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
-            if(!checkString(e.key)){
+            document.getElementById(isMobile() ? charPressed : charPressed + "-" + currentStyleSheet.id).style.backgroundColor = keyPressedColor;
+            console.log("HERE");
+            if(!checkString(charPressed)){
                 gameOver = true;
                 failureMessage.style.visibility = "visible";                
             }
@@ -185,37 +196,73 @@ function keyDownHandler(e) {
 }
 
 function keyUpHandler(e) {
-    if (currentStyleSheet.id == "modernSpace" && (e.key == "Escape" || e.key == "Backspace" || e.key == " " || e.key == "ArrowUp" || e.key == "ArrowLeft" || e.key == "ArrowDown" || e.key == "ArrowUp" || e.key == "ArrowRight" || e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown")) {
-        if (e.key == " ") {
+    let charPressed = '';
+    if(isMobile()){
+        charPressed = e.target.id;
+    } else { charPressed = e.key; }
+
+    if (currentStyleSheet.id == "modernSpace" && (charPressed == "Escape" || charPressed == "Backspace" || charPressed == " " || charPressed == "ArrowUp" || charPressed == "ArrowLeft" || charPressed == "ArrowDown" || charPressed == "ArrowUp" || charPressed == "ArrowRight" || charPressed == "Help" || charPressed == "Home" || charPressed == "PageUp" || charPressed == "Delete" || charPressed == "End" || charPressed == "PageDown")) {
+        if (charPressed == " ") {
             document.getElementById("space-" + currentStyleSheet.id).style.backgroundColor = accentBaseColor;
-        } else if (e.key == "Help" || e.key == "Home" || e.key == "PageUp" || e.key == "Delete" || e.key == "End" || e.key == "PageDown") {
-            document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = specialKeysBase;
+        } else if (charPressed == "Help" || charPressed == "Home" || charPressed == "PageUp" || charPressed == "Delete" || charPressed == "End" || charPressed == "PageDown") {
+            document.getElementById(charPressed + "-" + currentStyleSheet.id).style.backgroundColor = specialKeysBase;
         } else {
-            document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = accentBaseColor;
+            document.getElementById(charPressed + "-" + currentStyleSheet.id).style.backgroundColor = accentBaseColor;
         }
     } else {
-        if (e.key == 'Shift') {
+        if (charPressed == 'Shift') {
             document.getElementById("ShiftL-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
             document.getElementById("ShiftR-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
-        } else if (e.key == 'Control') {
+        } else if (charPressed == 'Control') {
             document.getElementById("ControlL-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
             document.getElementById("ControlR-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
-        } else if (e.key == 'Alt') {
+        } else if (charPressed == 'Alt') {
             document.getElementById("AltL-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
             document.getElementById("AltR-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
         }
-        else if (e.key == " ") {
+        else if (charPressed == " ") {
             document.getElementById("space-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
         }
         else {
-            document.getElementById(e.key + "-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
+            document.getElementById(isMobile() ? charPressed : charPressed + "-" + currentStyleSheet.id).style.backgroundColor = keyBaseColor;
         }
     }
 }
 
-currentStyleSheet = classicDark;
-getRandomString(5);
-highScoreElement.innerHTML = highScore;
-currentScoreElement.innerHTML = points;
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+function isMobile(){
+    if(navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)){
+        return true;
+    } else{ return false }
+}
+
+function setEvents(){
+    for(let i = 0; i < charSet.length; i++){        
+        let key = document.getElementById(charSet[i]+"-"+currentStyleSheet.id);
+        key.addEventListener("touchstart", keyDownHandler);
+        key.addEventListener("touchend", keyUpHandler);        
+    }
+
+    document.getElementById("space-" + currentStyleSheet.id).addEventListener("touchstart", keyDownHandler);
+    document.getElementById("space-" + currentStyleSheet.id).addEventListener("touchend", keyUpHandler);        
+}
+
+function gameSetup(){
+    currentStyleSheet = classicDark;
+    highScoreElement.innerHTML = highScore;
+    currentScoreElement.innerHTML = points;
+    
+    console.log("before");
+    document.addEventListener("keydown", keyDownHandler);
+    document.addEventListener("keyup", keyUpHandler);
+
+    if(isMobile()){
+        charSet = 'abcdfghijlmnopqrsatuvwxyz';
+    }else{
+        charSet = 'abcdefghijklmnopqrsatuvwxyz';
+    }
+
+    setEvents();
+    getRandomString(5);
+}
+
+gameSetup();

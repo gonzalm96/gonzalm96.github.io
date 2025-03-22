@@ -1,5 +1,6 @@
 .modernSpace {
   display: none;
+  padding: 0 16px;
 }
 .modernSpace p {
   font-family: "Tektur", sans-serif;
@@ -8,39 +9,44 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-.modernSpace .space-board {
+.modernSpace-board {
   background-color: #F9F9F9;
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
   min-height: 275px;
-  padding: 16px;
+  padding: 8px 4px;
   border-radius: 8px;
   border: 2px solid #EBEBEB;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
-.modernSpace .space-board__main {
+.modernSpace-board__main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
 }
-.modernSpace .space-board__secondary {
+.modernSpace-board__secondary {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   margin: 0 auto;
 }
-.modernSpace .space-board .row-special-keys .key {
+@media (min-width: 399px) {
+  .modernSpace-board {
+    padding: 16px;
+  }
+}
+.modernSpace-board .row-special-keys .key {
   background-color: #00538F;
   border-color: #003C66;
   color: #F9F9F9;
 }
-.modernSpace .space-board .key {
-  width: 38px;
-  height: 38px;
-  margin: 8px;
+.modernSpace-board .key {
+  width: 60px;
+  height: 35px;
+  margin: 4px;
   text-transform: uppercase;
   text-align: center;
   border: 3px solid #EBEBEB;
@@ -55,40 +61,51 @@
   background-color: #F9F9F9;
   color: #001B2E;
 }
-.modernSpace .space-board .key__1 {
-  width: 60px;
+.modernSpace-board .key__1 {
+  width: 60px !important;
   border-radius: 6px;
 }
-.modernSpace .space-board .key__2 {
-  width: 80px;
+.modernSpace-board .key__2 {
+  width: 80px !important;
   border-radius: 6px;
 }
-.modernSpace .space-board .key__3 {
-  width: 100px;
+.modernSpace-board .key__3 {
+  width: 100px !important;
   border-radius: 6px;
 }
-.modernSpace .space-board .key__4 {
-  width: 120px;
+.modernSpace-board .key__4 {
+  width: 120px !important;
   border-radius: 6px;
 }
-.modernSpace .space-board .key__space {
+.modernSpace-board .key__space {
+  flex: 1 0 33% !important;
+  border-radius: 6px;
+}
+.modernSpace-board .key__space {
   flex: 1 0 33%;
   border-radius: 6px;
 }
-.modernSpace .space-board .key__small-text {
+.modernSpace-board .key__small-text {
   font-size: 8px;
 }
-.modernSpace .space-board .key__window {
+.modernSpace-board .key__window {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
 }
-.modernSpace .space-board .key__esc, .modernSpace .space-board .key__arrow-accent {
+.modernSpace-board .key__esc, .modernSpace-board .key__arrow-accent {
   background-color: #FF2E00;
   color: #F9F9F9;
   border-color: #FF2E00;
 }
-.modernSpace .space-board .arrow {
+@media (min-width: 399px) {
+  .modernSpace-board .key {
+    width: 38px;
+    height: 38px;
+    margin: 8px;
+  }
+}
+.modernSpace-board .arrow {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -100,11 +117,11 @@
   border-width: 4px 4px 0 0;
   border-style: solid;
 }
-.modernSpace .space-board .arrow:after, .modernSpace .space-board .arrow:before {
+.modernSpace-board .arrow:after, .modernSpace-board .arrow:before {
   content: "";
   box-sizing: border-box;
 }
-.modernSpace .space-board .arrow:before {
+.modernSpace-board .arrow:before {
   right: 0;
   top: -3px;
   position: absolute;
@@ -114,21 +131,21 @@
   width: 23px;
   transform-origin: right top;
 }
-.modernSpace .space-board .arrow[class*=__left] {
+.modernSpace-board .arrow[class*=__left] {
   transform: rotate(45deg);
 }
-.modernSpace .space-board .arrow[class*=__right] {
+.modernSpace-board .arrow[class*=__right] {
   transform: rotate(-135deg);
 }
-.modernSpace .space-board .arrow[class*=__up] {
+.modernSpace-board .arrow[class*=__up] {
   transform: rotate(-45deg);
   margin-bottom: 6px;
 }
-.modernSpace .space-board .arrow[class*=__down] {
+.modernSpace-board .arrow[class*=__down] {
   transform: rotate(135deg);
   margin-top: 6px;
 }
-.modernSpace .space-board .window-lines {
+.modernSpace-board .window-lines {
   width: 20px;
   border-top: 1px solid #001B2E;
   border-bottom: 1px solid #001B2E;

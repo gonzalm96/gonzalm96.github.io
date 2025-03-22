@@ -1,3 +1,6 @@
+$keyWidthMobile: 60px;
+$keyHeightMobile: 35px;
+
 $keyWidth: 38px;
 $keyHeight: 38px;
 
@@ -16,6 +19,7 @@ $KeyColorPressed: #7E7F83;
 
 .modernSpace{
     display: none;
+    padding: 0 16px;
 
     p{
         font-family: "Tektur", sans-serif;
@@ -26,13 +30,13 @@ $KeyColorPressed: #7E7F83;
         "wdth" 100;
     }
 
-    .space-board{
+    &-board{
         background-color: $keyboardColor;
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
         min-height: 275px;            
-        padding: 16px;
+        padding: 8px 4px;   
         border-radius: 8px;
         border: 2px solid $keyBorder;
         -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -52,15 +56,19 @@ $KeyColorPressed: #7E7F83;
             margin: 0 auto;
         }
 
+        @media(min-width: 399px){
+            padding: 16px;
+        }
+
         .row-special-keys .key{
             background-color: $specialKeysColor;
             border-color: $specialKeysBorder;
             color: $keyColor;
         }
         .key{
-            width: $keyWidth;
-            height: $keyHeight;
-            margin: 8px;
+            width: $keyWidthMobile;
+            height: $keyHeightMobile;
+            margin: 4px;
             text-transform: uppercase;
             text-align: center;
             border: 3px solid $keyBorder;
@@ -75,22 +83,11 @@ $KeyColorPressed: #7E7F83;
             background-color: $keyColor;
             color: $keyTextColor;
         
-            &__1{
-                width: 60px;
-                border-radius: 6px;
-            }
-            &__2{
-                width: 80px;
-                border-radius: 6px;
-            }
-            &__3{
-                width: 100px;
-                border-radius: 6px;
-            }
-            &__4{
-                width: 120px;
-                border-radius: 6px;
-            }
+            &__1{width: 60px !important; border-radius: 6px;}
+            &__2{width: 80px !important; border-radius: 6px;}
+            &__3{width: 100px !important; border-radius: 6px;}
+            &__4{width: 120px !important; border-radius: 6px;}
+            &__space{flex: 1 0 33% !important; border-radius: 6px;}  
             
             &__space{
                 flex: 1 0 33%;
@@ -111,6 +108,12 @@ $KeyColorPressed: #7E7F83;
                 background-color: $keyAccentColor;
                 color: $keyColor;
                 border-color: $keyAccentColor;
+            }
+
+            @media(min-width: 399px){
+                width: $keyWidth;
+                height: $keyHeight;
+                margin: 8px;
             }
         }
         
