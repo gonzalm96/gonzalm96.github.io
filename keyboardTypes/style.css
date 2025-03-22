@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  color: #F1F0EA;
+  color: #F1E9DA;
   overflow: hidden;
 }
 
@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background: #36393B;
+  background: #1B1B1E;
 }
 
 main {
@@ -222,7 +222,7 @@ h3 {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  color: #F1F0EA;
+  color: #F1E9DA;
   border-radius: 8px;
   padding: 0 16px 8px;
 }
@@ -240,7 +240,7 @@ h3 {
   align-items: flex-start;
   height: fit-content;
   padding-bottom: 16px;
-  border-bottom: 3px solid #F1F0EA;
+  border-bottom: 3px solid #F1E9DA;
 }
 .points-box__current-score {
   font-size: 24px;
@@ -257,7 +257,7 @@ h3 {
 }
 
 .correct {
-  color: #F1F0EA;
+  color: #F1E9DA;
 }
 
 .wrong {
