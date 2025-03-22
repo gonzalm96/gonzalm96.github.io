@@ -14,7 +14,7 @@
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  min-height: 275px;
+  min-height: 255px;
   padding: 8px 4px;
   border-radius: 8px;
   border: 2px solid #EBEBEB;
@@ -149,6 +149,11 @@
   width: 20px;
   border-top: 1px solid #001B2E;
   border-bottom: 1px solid #001B2E;
+}
+@media (min-width: 399px) {
+  .modernSpace {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=modernSpace.css.map */

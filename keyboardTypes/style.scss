@@ -64,7 +64,7 @@ h3{
 .row {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 0;
 
     &__arrows {
@@ -72,6 +72,12 @@ h3{
 
         &--up {
             justify-content: center;
+        }
+    }
+
+    @media(max-width: 398px){
+        &-5{
+            margin-top: 16px;
         }
     }
 

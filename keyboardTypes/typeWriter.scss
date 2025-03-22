@@ -30,7 +30,7 @@ $KeyColorPressed: #7E7F83;
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
-        min-height: 275px;           
+        min-height: 255px;           
         padding: 8px 4px; 
         border-radius: 8px;
         border: 2px solid $keyBorder;
@@ -145,6 +145,10 @@ $KeyColorPressed: #7E7F83;
             border-top: 1px solid $keyTextColor;
             border-bottom: 1px solid $keyTextColor;    
         }
+    }
+
+    @media(min-width: 399px){
+        padding: 0;
     }
 }
 

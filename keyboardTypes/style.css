@@ -45,7 +45,7 @@ h3 {
 .row {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0;
 }
 .row__arrows {
@@ -53,6 +53,11 @@ h3 {
 }
 .row__arrows--up {
   justify-content: center;
+}
+@media (max-width: 398px) {
+  .row-5 {
+    margin-top: 16px;
+  }
 }
 @media (min-width: 399px) {
   .row {

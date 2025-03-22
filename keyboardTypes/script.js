@@ -179,7 +179,7 @@ function keyDownHandler(e) {
             }         
         }
         else if (charPressed == "Backspace") {
-            //document.getElementById(currentStyleSheet.id).style.backgroundColor = accentPressedColor;
+            document.getElementById(currentStyleSheet.id).style.backgroundColor = accentPressedColor;
             removeLastChar();
         }
         else {
@@ -256,7 +256,7 @@ function gameSetup(){
     document.addEventListener("keyup", keyUpHandler);
 
     if(isMobile()){
-        charSet = 'abcdfghijlmnopqrsatuvwxyz';
+        charSet = 'qwrtyuiopasmdfgh';
     }else{
         charSet = 'abcdefghijklmnopqrsatuvwxyz';
     }

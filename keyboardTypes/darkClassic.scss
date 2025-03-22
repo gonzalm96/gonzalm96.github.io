@@ -28,7 +28,7 @@ $KeyColorPressed: #7E7F83;
         flex-flow: row nowrap;
         width: 100%;
         padding: 8px 4px;   
-        min-height: 275px;                
+        min-height: 255px;                
         border-radius: 8px;
         border: 2px solid $keyBorder;
         -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -70,7 +70,9 @@ $KeyColorPressed: #7E7F83;
             &__2{width: 80px !important;}
             &__3{width: 100px !important;}
             &__4{width: 120px !important;}
-            &__space{flex: 1 0 33% !important;}  
+            &__space{
+                flex: 1 0 33% !important; 
+            }  
         
             &__small-text{
                 font-size: 8px;
