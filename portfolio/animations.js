@@ -63,6 +63,30 @@ jQuery(document).ready(function() {
                     $("#keyboards-desc").animate({height: 0}, 300);       
                 }
             );
+            $("#portfolio").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#portfolio-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#portfolio-desc").animate({height: 0}, 300);       
+                }
+            );
+            $("#thumb").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#thumb-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#thumb-desc").animate({height: 0}, 300);       
+                }
+            );
+            $("#financial").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#financial-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#financial-desc").animate({height: 0}, 300);       
+                }
+            );
         }
     }
     resizeForm();

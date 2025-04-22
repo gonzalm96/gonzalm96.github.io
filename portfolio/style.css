@@ -372,6 +372,10 @@ p{
     }
 }
 
+.section-top:not(:first-of-type){
+    margin-top: 64px;
+}
+
 .section-right{
     flex: 0 1 45%;   
 }
@@ -503,6 +507,42 @@ p{
     }
 
     background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.project-box--portfolio, .project-box-image--portfolio{
+    background-color: #171D26;
+    @media(min-width: 500px){
+        background: #434B5E;
+        background-image: url("../images/TitleCard.png");
+    }
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.project-box--thumb, .project-box-image--thumb{
+    background-color: #171D26;
+    @media(min-width: 500px){
+        background: #434B5E;
+        background-image: url("../images/Title.png");
+    }
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.project-box--financial, .project-box-image--financial{
+    background-color: #171D26;
+    @media(min-width: 500px){
+        background: #434B5E;
+        background-image: url("../images/Frame1.png");
+    }
+
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
 }
