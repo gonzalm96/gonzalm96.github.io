@@ -87,6 +87,14 @@ jQuery(document).ready(function() {
                     $("#financial-desc").animate({height: 0}, 300);       
                 }
             );
+            $("#foster").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#foster-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#foster-desc").animate({height: 0}, 300);       
+                }
+            );
         }
     }
     resizeForm();
