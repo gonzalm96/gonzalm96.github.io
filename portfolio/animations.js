@@ -95,6 +95,24 @@ jQuery(document).ready(function() {
                     $("#foster-desc").animate({height: 0}, 300);       
                 }
             );
+
+            $("#atm").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#atm-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#atm-desc").animate({height: 0}, 300);       
+                }
+            );
+
+            $("#austin").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#austin-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#austin-desc").animate({height: 0}, 300);       
+                }
+            );
         }
     }
     resizeForm();

@@ -486,6 +486,24 @@ p{
     background-color: #171D26;
 }
 
+.project-box--atm, .project-box-image--atm{
+    @media(min-width: 500px){
+        background-image: url("../images/ATM_Cover.png");
+    }
+
+    background-size: 100%;
+    background-color: #171D26;
+}
+
+.project-box--austin, .project-box-image--austin{
+    @media(min-width: 500px){
+        background-image: url("../images/austin.png");
+    }
+
+    background-size: 100%;
+    background-color: #171D26;
+}
+
 .project-box--recs, .project-box-image--recs{
     @media(min-width: 500px){
         background-image: url("../images/recs.png");
