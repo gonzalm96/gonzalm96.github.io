@@ -504,6 +504,15 @@ p{
     background-color: #171D26;
 }
 
+.project-box--extension, .project-box-image--extension{
+    @media(min-width: 500px){
+        background-image: url("../images/FEmentorExtension.jpg");
+    }
+
+    background-size: 100%;
+    background-color: #171D26;
+}
+
 .project-box--recs, .project-box-image--recs{
     @media(min-width: 500px){
         background-image: url("../images/recs.png");

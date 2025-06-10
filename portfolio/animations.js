@@ -113,6 +113,15 @@ jQuery(document).ready(function() {
                     $("#austin-desc").animate({height: 0}, 300);       
                 }
             );
+
+            $("#extension").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#extension-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#extension-desc").animate({height: 0}, 300);       
+                }
+            );
         }
     }
     resizeForm();
