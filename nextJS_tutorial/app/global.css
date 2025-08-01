@@ -1,0 +1,14 @@
+html, body {
+  background-color: lime;
+}
+
+.gameContainer {
+  max-width: 425px;
+  border: 2px solid white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=global.css.map */

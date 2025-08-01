@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="darkClassic.css" />
+  <link rel="stylesheet" href="typeWriter.css" />
+  <link rel="stylesheet" href="modernSpace.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tektur:wght@400..900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Tektur:wght@400..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="fixed-width">
+    <div class="game-area">
+      <div class="match-box">
+        <div id="match-box" class="match-box__start">
+          <h2>Match as many sequences in a row without messing up!</h2>          
+          <h3 class="match-box__start--string"><div id="match-string" class="match-string-container"></div></h3>
+        </div>
+        <div id="match-box-solution" class="match-box__solution">
+          <h2>Current Solution:</h2>          
+          <h3 class="match-box__solution--string"><div id="match-string-solution" class="match-string-container"></div></h3>
+          <h4 id="failure-message" class="match-box__solution--string match-box__solution--failure wrong">Oops wrong letter! Press the space bar to try again.</h4>
+        </div>
+      </div>
+    </div>
+    <div class="game-interactive">
+      <div class="game-interactive__boardContainer">
+        <div id="modernSpace" class="modernSpace">
+          <div class="modernSpace-board">
+            <div class="modernSpace-board__secondary  hide--mobile">
+              <div class="row-arrows hide--mobile">
+                <div class="row row__arrows--up">
+                  <p id="ArrowUp-modernSpace" class="key key__arrow-accent key__small-text" value="1">
+                    <span class="arrow arrow__up"></span>
+                  </p>
+                </div>
+                <div class="row row__arrows--down">
+                  <p id="ArrowLeft-modernSpace" class="key key__arrow-accent key__small-text" value="2">
+                    <span class="arrow arrow__right"></span>
+                  </p>
+                  <p id="ArrowDown-modernSpace" class="key key__arrow-accent key__small-text" value="3">
+                    <span class="arrow arrow__down"></span>
+                  </p>
+                  <p id="ArrowRight-modernSpace" class="key key__arrow-accent ey__small-text" value="4">
+                    <span class="arrow arrow__left"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+ 
+      </div>
+      <div class="game-interactive__aside">
+        <div class="points-box">
+          <h2 class="points-box__current-score"> Highest Streak: <span id="highScore"></span></h2>
+          <h2 class="points-box__current-score"> Current Streak: <span id="currentScore"></span></h2>
+        </div>
+        <div class="changeStyles">
+          <button class="styleButton styleButton__dark" onClick="changeKeyboard('darkClassic.css')">
+            Classic Dark
+          </button>
+
+          <button class="styleButton styleButton__space" onClick="changeKeyboard('modernSpace.css')">
+            Astro Light
+          </button>
+          <button class="styleButton styleButton__typeWriter" onClick="changeKeyboard('typeWriter.css')">
+            Type Writer
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>

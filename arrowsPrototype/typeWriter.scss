@@ -1,0 +1,299 @@
+$keyWidthMobile: 60px;
+$keyHeightMobile: 35px;
+
+$keyWidth: 38px;
+$keyHeight: 38px;
+
+// $pageColor: #AB3428;
+$pageColor: #AB3428;
+// $keyboardColor: #89B6A5;
+$keyboardColor: #3E4338;
+$keyColor: #F2E8CF;
+$keyBorder: #001B2E;
+$keyTextColor: #011638;
+
+$KeyColorPressed: #7E7F83;
+
+.typeWriter{
+    display: none;
+    padding: 0 16px;
+
+    p{
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .typeWriter-board{
+        background-color: $keyboardColor;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        min-height: 255px;           
+        padding: 8px 4px; 
+        border-radius: 8px;
+        border: 2px solid $keyBorder;
+
+        &__main{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+        }
+
+        &__secondary{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        @media(min-width: 399px){
+            padding: 16px;
+        }
+
+        .key{
+            width: $keyWidthMobile;
+            height: $keyHeightMobile;
+            margin: 4px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 3px solid $keyBorder;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            font-size: 12px;
+            background-color: $keyColor;
+            color: $keyTextColor;
+        
+            &__1{width: 60px !important; border-radius: 6px;}
+            &__2{width: 80px !important; border-radius: 6px;}
+            &__3{width: 100px !important; border-radius: 6px;}
+            &__4{width: 120px !important; border-radius: 6px;}
+            &__space{flex: 1 0 33% !important; border-radius: 6px;}  
+            
+            &__space{
+                flex: 1 0 33%;
+                border-radius: 6px;
+            }  
+        
+            &__small-text{
+                font-size: 8px;
+            }
+        
+            &__window{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;        
+            }
+
+            @media(min-width: 399px){
+                width: $keyWidth;
+                height: $keyHeight;
+                margin: 8px;
+                border-radius: 50%;
+            }
+        }
+        
+        .arrow{
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            color: $keyTextColor;
+            box-sizing: border-box;
+            &:after, &:before {
+                content: "";
+                box-sizing: border-box;
+            }
+            padding: 5px;
+            width: 10px;
+            height: 10px;
+            border-width: 4px 4px 0 0;
+            border-style: solid;
+            &:before{
+                right: 0;
+                top: -3px;
+                position: absolute;
+                height: 4px;
+                box-shadow: inset 0 0 0 32px;
+                transform: rotate(-45deg);
+                width: 23px;
+                transform-origin: right top;
+            }
+            &[class*="__left"]{
+                transform: rotate(45deg);
+            }
+            &[class*="__right"]{
+                transform: rotate(-135deg);
+            }
+            &[class*="__up"]{
+                transform: rotate(-45deg);
+                margin-bottom: 6px;
+            }
+            &[class*="__down"]{
+                transform: rotate(135deg);
+                margin-top: 6px;
+            }
+        }
+        
+        .window-lines{
+            width: 20px;
+            border-top: 1px solid $keyTextColor;
+            border-bottom: 1px solid $keyTextColor;    
+        }
+    }
+
+    @media(min-width: 399px){
+        padding: 0;
+    }
+}
+
+// $keyWidth: 38px;
+// $keyHeight: 38px;
+
+// // $pageColor: #AB3428;
+// $pageColor: #AB3428;
+// // $keyboardColor: #89B6A5;
+// $keyboardColor: #3E4338;
+// $keyColor: #F2E8CF;
+// $keyBorder: #001B2E;
+// $keyTextColor: #011638;
+
+// $KeyColorPressed: #7E7F83;
+
+// .typeWriter{
+//     display: none;
+
+//     p{
+//         font-family: "Orbitron", sans-serif;
+//         font-optical-sizing: auto;
+//         font-weight: 500;
+//         font-style: normal;
+//     }
+
+//     .typeWriter-board{
+//         background-color: $keyboardColor;
+//         display: flex;
+//         flex-flow: row nowrap;
+//         width: 100%;
+//         min-height: 275px;           
+//         padding: 16px;
+//         border-radius: 8px;
+//         border: 2px solid $keyBorder;
+
+//         &__main{
+//             display: flex;
+//             flex-flow: column nowrap;
+//             justify-content: space-between;
+//         }
+
+//         &__secondary{
+//             display: flex;
+//             flex-flow: column nowrap;
+//             justify-content: space-between;
+//             margin: 0 auto;
+//         }
+
+//         .key{
+//             width: $keyWidth;
+//             height: $keyHeight;
+//             margin: 8px;
+//             text-transform: uppercase;
+//             text-align: center;
+//             border: 3px solid $keyBorder;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             border-radius: 50%;
+//             -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+//             -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+//             box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+//             font-size: 12px;
+//             background-color: $keyColor;
+//             color: $keyTextColor;
+        
+//             &__1{
+//                 width: 60px;
+//                 border-radius: 6px;
+//             }
+//             &__2{
+//                 width: 80px;
+//                 border-radius: 6px;
+//             }
+//             &__3{
+//                 width: 100px;
+//                 border-radius: 6px;
+//             }
+//             &__4{
+//                 width: 120px;
+//                 border-radius: 6px;
+//             }
+            
+//             &__space{
+//                 flex: 1 0 33%;
+//                 border-radius: 6px;
+//             }  
+        
+//             &__small-text{
+//                 font-size: 8px;
+//             }
+        
+//             &__window{
+//                 display: flex;
+//                 flex-flow: column nowrap;
+//                 justify-content: space-evenly;        
+//             }
+//         }
+        
+//         .arrow{
+//             position: relative;
+//             display: inline-block;
+//             vertical-align: middle;
+//             color: $keyTextColor;
+//             box-sizing: border-box;
+//             &:after, &:before {
+//                 content: "";
+//                 box-sizing: border-box;
+//             }
+//             padding: 5px;
+//             width: 10px;
+//             height: 10px;
+//             border-width: 4px 4px 0 0;
+//             border-style: solid;
+//             &:before{
+//                 right: 0;
+//                 top: -3px;
+//                 position: absolute;
+//                 height: 4px;
+//                 box-shadow: inset 0 0 0 32px;
+//                 transform: rotate(-45deg);
+//                 width: 23px;
+//                 transform-origin: right top;
+//             }
+//             &[class*="__left"]{
+//                 transform: rotate(45deg);
+//             }
+//             &[class*="__right"]{
+//                 transform: rotate(-135deg);
+//             }
+//             &[class*="__up"]{
+//                 transform: rotate(-45deg);
+//                 margin-bottom: 6px;
+//             }
+//             &[class*="__down"]{
+//                 transform: rotate(135deg);
+//                 margin-top: 6px;
+//             }
+//         }
+        
+//         .window-lines{
+//             width: 20px;
+//             border-top: 1px solid $keyTextColor;
+//             border-bottom: 1px solid $keyTextColor;    
+//         }
+//     }
+// }

@@ -1,0 +1,80 @@
+$primary-500: #1E3888;
+$primary-400: #324A93;
+$primary-300: #455A9D;
+$primary-200: #5669A6;
+$primary-100: #6577AE;
+
+$tertiary-300: #F5ECCC;
+$tertiary-200: #F8F2DD;
+$tertiary-100: #FCF9EE;
+
+$accent-500: #FF715B;
+$accent-400: #FF8370;
+$accent-300: #FF8E7D;
+$accent-200: #FF9889;
+$accent-100: #FFA194;
+
+$black: #0000;
+$white: #ffff;
+
+$containerBG: $primary-500;
+$text: #F3F6F7;
+$success: #35CE8D;
+$failure: #CF1010;
+
+.matchStringContainer{
+    width: fit-content;
+    height: 26px;
+    padding: 8px 16px;
+    margin: auto auto 0;
+    border: 2px solid $primary-500;
+}
+
+//animation attempt
+
+/* SuccessAnimation.css */
+.successAnimation {
+    background-color: $primary-500;    
+    animation: fadeInOutSuccess 0.3s ease-in-out forwards; /* Adjust duration as needed */
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: 2px solid $primary-500;
+  }
+  
+  @keyframes fadeInOutSuccess {
+    0% {      
+      background-color: $primary-500;
+      
+    }
+    50% {      
+      background-color: $success;
+      border: 2px solid $tertiary-300;
+      
+    }
+    100% {      
+      background-color: $primary-500;
+    }
+  }
+
+  .failureAnimation {
+    background-color: $primary-500;    
+    animation: fadeInOutFail 0.3s ease-in-out forwards; /* Adjust duration as needed */
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: 2px solid $primary-500;
+  }
+  
+  @keyframes fadeInOutFail {
+    0% {      
+      background-color: $primary-500;
+      
+    }
+    50% {      
+      background-color: $failure;
+      border: 2px solid $accent-100;
+      
+    }
+    100% {      
+      background-color: $primary-500;
+    }
+  }

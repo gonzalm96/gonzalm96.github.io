@@ -1,0 +1,477 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./app/GameScreen/gameStyles.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+.gameStyles_p__JJ9xQ {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+.gameStyles_introTitle__Xztdx {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: "Changa One", sans-serif;
+}
+.gameStyles_introTitle__Xztdx h1 {
+  margin: 0;
+  font-size: 2.1rem;
+}
+.gameStyles_introTitle__Xztdx h2 {
+  margin-top: 4px;
+  margin-bottom: 80px;
+}
+
+.gameStyles_titleAccent__A_mAa {
+  color: #FF715B;
+  font-size: 3rem;
+}
+
+.gameStyles_startButton__K8chN {
+  padding: 16px 32px;
+  color: #F3F6F7;
+  background-color: #FF715B;
+  border: 2px solid #FFA194;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: "Changa One", sans-serif;
+  font-size: 1.5rem;
+}
+.gameStyles_startButton__K8chN:hover {
+  cursor: pointer;
+}
+
+.gameStyles_gameContainer__2paif, .gameStyles_landingContainer__iYgyx {
+  display: flex;
+  position: relative;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  margin: auto;
+  padding: 32px 16px;
+  background-color: #1E3888;
+  border: 4px solid #455A9D;
+  border-radius: 4px;
+  color: #F3F6F7;
+}
+
+.gameStyles_gameArea__GDS7M {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.gameStyles_gameArea__GDS7M h2 {
+  text-align: center;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+}
+
+.gameStyles_pageTitle__xaNFb {
+  text-align: center;
+  font-family: "Changa One", sans-serif;
+  font-size: 3rem;
+  margin: 0 auto;
+}
+
+.gameStyles_endGameSubtitle__op4Ub {
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.1rem;
+  margin-bottom: 0;
+}
+
+.gameStyles_startButtonContainer__9vGBx {
+  position: relative;
+}
+
+.gameStyles_timer__k_gGW {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Titillium Web", sans-serif;
+  color: #FF8E7D;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.gameStyles_timerButton__JQCwD {
+  z-index: 100;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  top: 85px;
+  left: 85px;
+  border: 3px solid #FFA194;
+  background-color: #1E3888;
+  color: white;
+}
+.gameStyles_timerButton__JQCwD:hover {
+  cursor: pointer;
+}
+.gameStyles_timerButton__JQCwD.gameStyles_color__fDnXR {
+  background-color: #000000;
+  border-color: white;
+}
+
+.gameStyles_heading3__0eMjw {
+  font-size: 2.1rem;
+}
+
+.gameStyles_heading4__eDnLF {
+  font-size: 1.7rem;
+}
+
+.gameStyles_heading5__eRZTV {
+  font-size: 1.5rem;
+}
+
+.gameStyles_arrowsArea__bFApp {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameStyles_inputContainer__L9Qoo {
+  height: 25px;
+  background-color: #F8F2DD;
+}
+
+.gameStyles_scoreContainer__UrMK_ {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.gameStyles_scoreContainerEnd__yqbbf {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.gameStyles_scoreContainerEnd__yqbbf .gameStyles_scoreBoard__PXeI5 p {
+  font-size: 1.5rem;
+  margin: 0 0 16px;
+}
+
+.gameStyles_scoreBoard__PXeI5 {
+  padding: 8px;
+}
+.gameStyles_scoreBoard__PXeI5 p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+.gameStyles_difficultyModal__0_o4y {
+  background-color: #324A93;
+  border-top: 4px solid #6577AE;
+  border-left: 4px solid #6577AE;
+  border-right: 4px solid #6577AE;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 53%;
+  border-radius: 4px 4px 0 0;
+}
+.gameStyles_difficultyModal__0_o4y .gameStyles_difficultyButton__WUbPL {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #6577AE;
+  background: none;
+  color: #F3F6F7;
+  padding: 18px 24px;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.gameStyles_difficultyModal__0_o4y .gameStyles_difficultyButton__WUbPL img {
+  width: 150px;
+  height: 18px;
+}
+
+.gameStyles_helpModal__aFY2Y {
+  background-color: #F5ECCC;
+  border: 4px solid #FCF9EE;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  bottom: -100%;
+  width: 350px;
+  height: 532px;
+  padding: 16px;
+  margin-bottom: 64px;
+  color: #1E3888;
+}
+.gameStyles_helpModal__aFY2Y img {
+  width: 150px;
+  height: 18px;
+}
+
+.gameStyles_slideUp__2R8hu {
+  animation: gameStyles_slideUpward__rkgZk 0.5s ease-in;
+  bottom: 0;
+}
+
+@keyframes gameStyles_slideUpward__rkgZk {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.gameStyles_slideDown__LeDIe {
+  animation: gameStyles_slideDownward__Xhn30 0.5s ease-in;
+  bottom: -100;
+}
+
+@keyframes gameStyles_slideDownward__Xhn30 {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: -100;
+  }
+}
+.gameStyles_backButtonContainer__Y9oU5 {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.gameStyles_backButtonContainer__Y9oU5 img {
+  height: 40px;
+  width: 45px;
+}
+
+.gameStyles_closeContainer__KAdnW {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.gameStyles_closeButton__vc2cg {
+  background: none;
+  height: 35px;
+  width: 35px;
+  padding: 0;
+  border: none;
+}
+.gameStyles_closeButton__vc2cg img {
+  height: 35px;
+  width: 35px;
+}
+
+.gameStyles_margin__top__none__MteqT {
+  margin-bottom: 0;
+}
+.gameStyles_margin__top__small__hPE4o {
+  margin-top: 8px;
+}
+.gameStyles_margin__bottom__none__j78P_ {
+  margin-bottom: 0;
+}
+.gameStyles_margin__bottom__small__WIy9y {
+  margin-bottom: 8px;
+}
+
+.gameStyles_mainContainer__jeS_k {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.gameStyles_howButton__8DZQu {
+  background: none;
+  border: 2px solid #FF715B;
+  border-radius: 4px;
+  color: #F3F6F7;
+  padding: 8px 24px;
+  margin-top: 24px;
+  font-size: 1rem;
+  font-family: "Titillium Web", sans-serif;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./app/GameScreen/buttons.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+.buttons_arrowButton___wl0i {
+  height: 120px;
+  width: 120px;
+  border-radius: 100% 0 0 0;
+  color: #F3F6F7;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.83rem;
+  margin: 0;
+  padding: 8px 12px;
+  touch-action: none;
+}
+
+.buttons_up__WTWlz {
+  transform: rotate(0);
+  background-color: #FF715B;
+  border: 3px solid #FFA194;
+}
+.buttons_up__WTWlz .buttons_centerText__TQce_ {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 50px;
+  left: 30px;
+}
+.buttons_up__WTWlz.buttons_color__1zl2O {
+  background-color: #3C91E6;
+  border: 3px solid #3C91E6;
+  color: #000000;
+}
+
+.buttons_down__OuSOz {
+  transform: rotate(180deg);
+  background-color: #FF715B;
+  border: 3px solid #FFA194;
+}
+.buttons_down__OuSOz .buttons_centerText__TQce_ {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 50px;
+  left: 30px;
+}
+.buttons_down__OuSOz.buttons_color__1zl2O {
+  background-color: #FF6B35;
+  border: 3px solid #FF6B35;
+  color: #000000;
+}
+
+.buttons_left__aqy0j {
+  transform: rotate(270deg);
+  background-color: #FF715B;
+  border: 3px solid #FFA194;
+}
+.buttons_left__aqy0j .buttons_centerText__TQce_ {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 50px;
+  left: 30px;
+}
+.buttons_left__aqy0j.buttons_color__1zl2O {
+  background-color: #35CE8D;
+  border: 3px solid #35CE8D;
+  color: #000000;
+}
+
+.buttons_right__RdB4K {
+  transform: rotate(90deg);
+  background-color: #FF715B;
+  border: 3px solid #FFA194;
+}
+.buttons_right__RdB4K .buttons_centerText__TQce_ {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 50px;
+  left: 30px;
+}
+.buttons_right__RdB4K.buttons_color__1zl2O {
+  background-color: #FFE548;
+  border: 3px solid #FFE548;
+  color: #000000;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./app/GameScreen/arrowStyle.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.arrowStyle_arrow__Vd5up {
+  margin: 0 4px;
+}
+.arrowStyle_arrow__Vd5up svg path {
+  background-color: lime;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./app/GameScreen/inputArea.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.inputArea_inputArea__GV5YW {
+  height: 25px;
+  width: 200px;
+  padding: 6px 16px;
+  background-color: #FCF9EE;
+  border: 3px solid #F5ECCC;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.inputArea_inputArea__GV5YW .inputArea_inputBox__3qu6O {
+  width: 165px;
+  height: inherit;
+  margin: auto;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./app/GameScreen/arrowContainer.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.arrowContainer_matchStringContainer__4nlHS {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 26px;
+  padding: 8px 16px;
+  margin: auto auto 0;
+  border: 2px solid #1E3888;
+}
+
+/* SuccessAnimation.css */
+.arrowContainer_successAnimation__ozsuk {
+  background-color: #1E3888;
+  animation: arrowContainer_fadeInOutSuccess__PGKpw 0.3s ease-in-out forwards; /* Adjust duration as needed */
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: 2px solid #1E3888;
+}
+
+@keyframes arrowContainer_fadeInOutSuccess__PGKpw {
+  0% {
+    background-color: #1E3888;
+  }
+  50% {
+    background-color: #35CE8D;
+    border: 2px solid #F5ECCC;
+  }
+  100% {
+    background-color: #1E3888;
+  }
+}
+.arrowContainer_failureAnimation__fn_1s {
+  background-color: #1E3888;
+  animation: arrowContainer_fadeInOutFail__nJfi1 0.3s ease-in-out forwards; /* Adjust duration as needed */
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: 2px solid #1E3888;
+}
+
+@keyframes arrowContainer_fadeInOutFail__nJfi1 {
+  0% {
+    background-color: #1E3888;
+  }
+  50% {
+    background-color: #CF1010;
+    border: 2px solid #FFA194;
+  }
+  100% {
+    background-color: #1E3888;
+  }
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./app/GameScreen/buttonStyles.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.buttonStyles_inputButtonsContainer__pJCu8 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 250px;
+  justify-content: center;
+  transform: rotate(45deg);
+}

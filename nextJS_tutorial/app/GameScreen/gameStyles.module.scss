@@ -1,0 +1,378 @@
+//needed to import styles
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+//colors
+$primary-500: #1E3888;
+$primary-400: #324A93;
+$primary-300: #455A9D;
+$primary-200: #5669A6;
+$primary-100: #6577AE;
+
+$tertiary-300: #F5ECCC;
+$tertiary-200: #F8F2DD;
+$tertiary-100: #FCF9EE;
+
+$accent-500: #FF715B;
+$accent-400: #FF8370;
+$accent-300: #FF8E7D;
+$accent-200: #FF9889;
+$accent-100: #FFA194;
+
+$black: #000000;
+$white: #ffff;
+
+$containerBG: $primary-500;
+$text: #F3F6F7;
+
+$success: #35CE8D;
+
+//typography
+$heading-1: 3rem;
+$heading-2: 2.5rem;
+$heading-3: 2.1rem;
+$heading-4: 1.7rem;
+$heading-5: 1.5rem;
+$body: 1rem;
+$caption: .83rem;
+
+$heading-font: 'Changa One', sans-serif;
+$subtitle-font: 'Titillium Web', sans-serif;
+$body-font: 'Nunito', sans-serif;
+
+.p{
+    font-family: $body-font;
+    font-size: $body;
+}
+
+.introTitle{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: $heading-font;
+
+    h1{
+        margin: 0;
+        font-size: $heading-3;
+    }
+
+    h2{
+        margin-top: 4px;
+        margin-bottom: 80px;
+    }
+}
+
+.titleAccent{
+    color: $accent-500;
+    font-size: $heading-1;    
+}
+
+.startButton{
+    padding: 16px 32px;
+    color: $text;
+    background-color: $accent-500;
+    border: 2px solid $accent-100;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: $heading-font;
+    font-size: $heading-5;   
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+//game area styling
+.gameContainer, .landingContainer{    
+    display: flex;
+    position: relative;
+    
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin: auto;
+    padding: 32px 16px;
+    
+    background-color: $containerBG;    
+    border: 4px solid $primary-300;
+    border-radius: 4px;
+    color: $text;     
+}
+
+.gameArea{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    h2{
+        text-align: center;
+        padding-bottom: 8px;
+        margin-bottom: 0;
+    }
+}
+
+.pageTitle{
+    text-align: center;
+    font-family: $heading-font;
+    font-size: $heading-1;
+    margin: 0 auto;
+}
+
+.endGameSubtitle{
+    text-align: center;
+    font-family: $subtitle-font;
+    font-size: $heading-3;
+    margin-bottom: 0;
+}
+
+.startButtonContainer{
+    position: relative;
+}
+
+.timer{
+    text-align: center;
+    margin: 0 auto;
+    font-family: $subtitle-font;
+    color: $accent-300;
+    font-weight: 600;
+    font-size: $heading-5;
+}
+
+.timerButton{
+    z-index: 100;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius:50%;
+    top: 85px;
+    left: 85px;
+
+    border: 3px solid $accent-100;
+    background-color: $primary-500;
+    color: $white;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &.color{
+        background-color: $black;
+        border-color: $white;
+    }
+}
+
+.heading3{
+    font-size: $heading-3;
+}
+
+.heading4{
+    font-size: $heading-4;
+}
+
+.heading5{
+    font-size: $heading-5;
+}
+
+.arrowsArea{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer{
+    height: 25px;
+    background-color: $tertiary-200;
+}
+
+.scoreContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.scoreContainerEnd{    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    .scoreBoard p{
+        font-size: $heading-5;
+        margin: 0 0 16px;
+    }
+}
+
+.scoreBoard{
+    padding: 8px;
+    
+    p{
+        font-family: $body-font;
+        font-size: $body;
+    }
+}
+
+.difficultyModal {
+    background-color: $primary-400;
+    border-top: 4px solid $primary-100;
+    border-left: 4px solid $primary-100;
+    border-right: 4px solid $primary-100;
+
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 53%;
+
+    border-radius: 4px 4px 0 0;
+
+    .difficultyButton{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid $primary-100;        
+        background: none;
+        color: $text;
+        padding: 18px 24px;
+        text-align: left;
+        font-size: $body;
+        font-family: $subtitle-font;
+        text-decoration: none;
+        font-weight: 600;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            width: 150px;
+            height: 18px;        
+            }
+        }
+}
+
+.helpModal{
+    background-color: $tertiary-300;
+    border: 4px solid $tertiary-100;
+    border-radius: 8px;
+
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    bottom: -100%;
+    width: 350px;
+    height: 532px;
+    padding: 16px;
+    margin-bottom: 64px;
+
+    color: $primary-500;
+
+    img{
+        width: 150px;
+        height: 18px;
+    }
+}
+
+.slideUp{
+    animation: slideUpward .5s ease-in;
+    bottom: 0;
+}
+
+@keyframes slideUpward {
+    0% {
+        bottom: -100%;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+
+.slideDown{
+    animation: slideDownward .5s ease-in;
+    bottom: -100;
+}
+
+@keyframes slideDownward {
+    0% {
+        bottom: 0%;
+    }
+
+    100% {
+        bottom: -100;
+    }
+
+}
+
+.backButtonContainer{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+    img{
+        height: 40px;
+        width: 45px;
+    }
+}
+
+.closeContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.closeButton{
+    background: none;
+    height: 35px;
+    width: 35px;
+    padding: 0;
+    border: none;
+
+    img{
+        height: 35px;
+        width: 35px;
+    }
+}
+
+.margin{
+    &__top{
+        &__none{
+            margin-bottom: 0;
+        }
+        &__small{
+            margin-top: 8px;
+        }
+    }
+
+    &__bottom{
+        &__none{
+            margin-bottom: 0;
+        }
+        &__small{
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.mainContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.howButton{
+    background: none;
+    border: 2px solid $accent-500;
+    border-radius: 4px;
+    color: $text;
+    padding: 8px 24px;
+    margin-top: 24px;
+    font-size: $body;
+    font-family: $subtitle-font;
+}

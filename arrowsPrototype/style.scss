@@ -1,0 +1,319 @@
+$keyWidth: 45px;
+$keyHeight: 45px;
+
+$pageColor: #1B1B1E;
+$textColor: #F1E9DA;
+$wrongTextColor: #ED6A5A;
+$keyColor: #000000;
+$keyTextColor: #F0F7EE;
+
+$KeyColorPressed: #7E7F83;
+
+$darkThemeMain: #000000;
+$darkThemeText: #F0F7EE;
+
+$typeThemeMain: #F2E8CF;
+$typeThemeText: #3E4338;
+
+$spaceThemeMain: #FF2E00;
+$spaceThemeText: #F9F9F9;
+
+html,
+body {
+    height: 100%;
+    color: $textColor;
+    overflow: hidden;
+}
+
+.fixed-width {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    background: $pageColor;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {    
+    text-align: center;     
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.44rem;
+    line-height: 1.05;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    @media(min-width: 399px){
+        font-size: 2.07rem;
+    }
+}
+
+h3{
+    font-size: 2.98rem;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0;
+
+    &__arrows {
+        display: flex;
+
+        &--up {
+            justify-content: center;
+        }
+    }
+
+    @media(max-width: 398px){
+        &-5{
+            margin-top: 16px;
+        }
+    }
+
+    @media(min-width: 399px){
+        height: 55px;
+        justify-content: space-evenly;
+        flex-flow: row nowrap;
+    }
+}
+
+.row-0 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    &__group {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+.changeStyles {
+    margin-bottom: 4px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 12px;
+    justify-content: space-between;
+}
+
+.styleButton {
+    padding: 8px 16px;
+    font-size: 12px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+    &__dark {
+        background-color: $darkThemeMain;
+        border: 2px solid $darkThemeText;
+        color: $darkThemeText;
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        
+        &:hover{
+            background-color: $darkThemeText;
+            border: 2px solid $darkThemeMain;
+            color: $darkThemeMain;
+            cursor: pointer;
+        }
+    }
+
+    &__typeWriter {
+        background-color: $typeThemeText;
+        border: 2px solid $typeThemeMain;
+        color: $typeThemeMain;
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        
+        &:hover{
+            background-color: $typeThemeMain;  
+            border: 2px solid $typeThemeText;          
+            color: $typeThemeText;
+            cursor: pointer;
+        }
+    }
+
+    &__space {
+        background-color: $spaceThemeMain;
+        border: 2px solid $spaceThemeText;
+        color: $spaceThemeText;
+        font-family: "Tektur", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        
+            &:hover{
+                background-color: $spaceThemeText;  
+                border: 2px solid $spaceThemeMain;              
+                color: $spaceThemeMain;
+                cursor: pointer;
+            }
+    }
+}
+
+.game-area {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;    
+
+    @media(min-width: 399px){
+        margin: 32px 0;        
+    }
+
+}
+
+.match-box {
+    flex: 1 0 70%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__start {
+
+        &--string {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: "Economica", sans-serif;
+        }
+    }
+
+    &__solution {
+        text-align: center;
+
+        &--string {
+            height: 32px; 
+            margin: 0;          
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: "Economica", sans-serif;
+        }
+
+        &--failure {
+            visibility: hidden;
+            height: 24px;           
+            font-family: "Economica", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 1rem;
+            letter-spacing: .5rem;
+            margin-bottom: 0px;
+
+            @media(min-width: 399px){
+                font-size: 2.07rem;
+            }
+        }
+    }
+}
+
+.game-interactive{
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 16px;
+
+    &__boardContainer{
+        flex: 1 0 80%;
+
+        @media(min-width: 399px){
+            padding-right: 32px;     
+        }
+    }
+
+    &__aside{
+        flex: 0 1 15%; 
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;        
+        color: $textColor;
+        border-radius: 8px;  
+        padding: 0 16px 8px;   
+    }
+
+    @media (min-width: 399px) {
+        flex-flow: row nowrap;
+        justify-content: space-between;      
+    }
+}
+
+.points-box {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: fit-content;
+    padding-bottom: 16px;
+    border-bottom: 3px solid $textColor;
+
+    &__current-score{
+        font-size: 24px;
+        font-family: "Economica", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @media(min-width: 399px){
+        flex: 0 1 25%;
+        flex-flow: column;
+        justify-content: flex-start;     
+    }
+}
+
+.correct {
+    color: $textColor;
+}
+
+.wrong {
+    color: $wrongTextColor;
+}
+
+.hide{    
+    &--mobile{
+        @media(max-width: 399px){
+            display: none !important;
+        }
+    }
+
+    &--desktop{
+        @media(min-width: 400px){
+            display: none !important;
+        }
+    }
+}
+
+.sequenceArrow{
+    margin: 0 8px;
+}
+
+.match-string-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+}

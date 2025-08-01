@@ -122,6 +122,24 @@ jQuery(document).ready(function() {
                     $("#extension-desc").animate({height: 0}, 300);       
                 }
             );
+
+            $("#fuzzy").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#fuzzy-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#fuzzy-desc").animate({height: 0}, 300);       
+                }
+            );
+
+            $("#fuzzy-britch").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#fuzzy-britch-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#fuzzy-britch-desc").animate({height: 0}, 300);       
+                }
+            );
         }
     }
     resizeForm();

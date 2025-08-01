@@ -1,0 +1,127 @@
+//needed to import styles
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+//colors
+$primary-500: #1E3888;
+$primary-400: #324A93;
+$primary-300: #455A9D;
+$primary-200: #5669A6;
+$primary-100: #6577AE;
+
+$tertiary-300: #F5ECCC;
+$tertiary-200: #F8F2DD;
+$tertiary-100: #FCF9EE;
+
+$accent-500: #FF715B;
+$accent-400: #FF8370;
+$accent-300: #FF8E7D;
+$accent-200: #FF9889;
+$accent-100: #FFA194;
+
+$black: #000000;
+$white: #ffff;
+
+$containerBG: $primary-500;
+$text: #F3F6F7;
+
+//typography
+$heading-1: 3rem;
+$heading-2: 2.5rem;
+$heading-3: 2.1rem;
+$heading-4: 1.7rem;
+$heading-5: 1.5rem;
+$body: 1rem;
+$caption: .83rem;
+
+$heading-font: 'Changa One', sans-serif;
+$subtitle-font: 'Titillium Web', sans-serif;
+$body-font: 'Nunito', sans-serif;
+
+$arrowUp: #3C91E6;
+$arrowRight: #FFE548;
+$arrowLeft: #35CE8D;
+$arrowDown: #FF6B35;
+
+.arrowButton {
+    height: 120px;
+    width: 120px;
+    border-radius: 100% 0 0 0;
+    color: $text;
+    font-family: $body-font;
+    font-size: $caption;
+    margin: 0;
+    padding: 8px 12px;
+    touch-action: none;
+}
+
+.up{
+    transform: rotate(0);
+    background-color: $accent-500;
+    border: 3px solid $accent-100;
+    .centerText{
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 50px;
+        left: 30px;
+    }
+
+    &.color{
+        background-color: $arrowUp;
+        border: 3px solid $arrowUp;
+        color: $black;
+    }
+}
+
+.down{
+    transform: rotate(180deg);
+        background-color: $accent-500;
+    border: 3px solid $accent-100;
+    .centerText{
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 50px;
+        left: 30px;
+    }
+
+    &.color{
+        background-color: $arrowDown;
+        border: 3px solid $arrowDown;
+        color: $black;
+    }
+}
+
+.left{
+    transform: rotate(270deg);  
+        background-color: $accent-500;
+    border: 3px solid $accent-100;
+    .centerText{
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 50px;
+        left: 30px;
+    } 
+
+    &.color{
+        background-color: $arrowLeft;
+        border: 3px solid $arrowLeft;
+        color: $black;
+    }
+}
+
+.right{
+    transform: rotate(90deg);
+        background-color: $accent-500;
+    border: 3px solid $accent-100;
+    .centerText{
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 50px;
+        left: 30px;
+    }
+
+    &.color{
+        background-color: $arrowRight;
+        border: 3px solid $arrowRight;
+        color: $black;
+    }
+}

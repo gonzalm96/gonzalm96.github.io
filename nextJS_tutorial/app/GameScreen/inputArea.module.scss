@@ -1,0 +1,19 @@
+$tertiary-300: #F5ECCC;
+$tertiary-200: #F8F2DD;
+$tertiary-100: #FCF9EE;
+
+.inputArea{
+    height: 25px;
+    width: 200px;
+    padding: 6px 16px;
+    background-color: $tertiary-100;
+    border: 3px solid $tertiary-300;        
+    border-radius: 8px;
+    margin-top: 16px;
+
+    .inputBox{
+        width: 165px;
+        height: inherit;
+        margin: auto;
+    }
+}

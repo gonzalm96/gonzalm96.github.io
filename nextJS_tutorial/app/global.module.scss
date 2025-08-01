@@ -1,0 +1,25 @@
+//typography
+$heading-1: 3rem;
+$heading-2: 2.5rem;
+$heading-3: 2.1rem;
+$heading-4: 1.7rem;
+$heading-5: 1.5rem;
+$body: 1rem;
+$caption: .83rem;
+
+$heading-font: 'Changa One', sans-serif;
+$subtitle-font: 'Titillium Web', sans-serif;
+$body-font: 'Nunito', sans-serif;
+
+.body{
+    background-color: lime;
+    width: 425px;
+    touch-action: none;
+    margin: 0;
+    overflow: hidden;
+
+    @media (min-width: 399px){
+        margin: 32px auto;
+    }
+}
+
