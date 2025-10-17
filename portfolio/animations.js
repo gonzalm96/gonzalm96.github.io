@@ -11,6 +11,24 @@ jQuery(document).ready(function() {
                 }
             );
 
+            $("#onlineu").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#onlineu-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#onlineu-desc").animate({height: 0}, 300);       
+                }
+            );
+
+            $("#switchup").hover(
+                function () {
+                    //fadein second image using jQuery fadeIn 
+                    $("#switchup-desc").animate({height: '100%'}, 300);        
+                }, function (){
+                    $("#switchup-desc").animate({height: 0}, 300);       
+                }
+            );
+
             $("#recs").hover(
                 function () {
                     //fadein second image using jQuery fadeIn 

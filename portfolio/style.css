@@ -473,7 +473,8 @@ p{
         background-image: url("../images/flappy.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -482,7 +483,8 @@ p{
         background-image: url("../images/foster.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -491,7 +493,8 @@ p{
         background-image: url("../images/ATM_Cover.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -500,7 +503,8 @@ p{
         background-image: url("../images/austin.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -509,7 +513,28 @@ p{
         background-image: url("../images/fuzzy.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
+    background-color: #171D26;
+}
+
+.project-box--onlineu, .project-box-image--onlineu{
+    @media(min-width: 500px){
+        background-image: url("../images/onlineu.png");
+    }
+
+    background-size: cover;
+background-position: center;
+    background-color: #171D26;
+}
+
+.project-box--switchup, .project-box-image--switchup{
+    @media(min-width: 500px){
+        background-image: url("../images/switchup.png");
+    }
+
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -518,7 +543,8 @@ p{
         background-image: url("../images/fuzzy-design.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -527,7 +553,8 @@ p{
         background-image: url("../images/FEmentorExtension.jpg");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -536,7 +563,8 @@ p{
         background-image: url("../images/recs.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -545,7 +573,8 @@ p{
         background-image: url("../images/symply.png");
     }
 
-    background-size: 100%;
+    background-size: cover;
+background-position: center;
     background-color: #171D26;
 }
 
@@ -573,6 +602,7 @@ p{
     }
 
     background-size: cover;
+background-position: center;
     background-repeat: no-repeat;
     background-position: 50%;
 }
@@ -585,6 +615,7 @@ p{
     }
 
     background-size: cover;
+background-position: center;
     background-repeat: no-repeat;
     background-position: 50%;
 }
@@ -597,6 +628,7 @@ p{
     }
 
     background-size: cover;
+background-position: center;
     background-repeat: no-repeat;
     background-position: 50%;
 }
