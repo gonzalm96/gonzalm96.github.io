@@ -55,11 +55,11 @@ main{
     margin: 50px auto;
 }
 
-img{
+/* img{
     object-fit: cover;
     width: 90%;
     height: auto;
-}
+} */
 
 .dual-images #ye{
     grid-area: ye;
@@ -423,12 +423,10 @@ p{
     align-items: center;
     flex: 0 1 100%;
     border-radius: 8px;
-    padding: 0 8px;   
     text-decoration: none;
     color: #F0F4EF;
     box-shadow: 0px 0px 8px 0px rgba(67,75,94,1);
     overflow: hidden;
-    padding: 16px 0;
 
     @media(min-width: 500px){
         flex: 0 1 31%;
@@ -442,9 +440,14 @@ p{
     box-shadow: 0px 0px 14px 0px rgba(67,75,94,1);
 }
 
+.project-box-image{
+    height: 100%;
+}
+
 @media(max-width: 499px){
     .project-box-image{
         position: absolute;
+        width: 100%;
         height: 100%;
         left: 0;
         right: 0;
@@ -465,8 +468,7 @@ p{
 }
 
 .project-box--flappy, .project-box-image--flappy{
-    @media(min-width: 500px){
-        background-image: url("../images/flappy.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -475,8 +477,7 @@ background-position: center;
 }
 
 .project-box--foster, .project-box-image--foster{
-    @media(min-width: 500px){
-        background-image: url("../images/foster.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -485,8 +486,7 @@ background-position: center;
 }
 
 .project-box--atm, .project-box-image--atm{
-    @media(min-width: 500px){
-        background-image: url("../images/ATM_Cover.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -495,8 +495,7 @@ background-position: center;
 }
 
 .project-box--austin, .project-box-image--austin{
-    @media(min-width: 500px){
-        background-image: url("../images/austin.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -505,8 +504,7 @@ background-position: center;
 }
 
 .project-box--fuzzy, .project-box-image--fuzzy{
-    @media(min-width: 500px){
-        background-image: url("../images/fuzzy.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -515,8 +513,7 @@ background-position: center;
 }
 
 .project-box--onlineu, .project-box-image--onlineu{
-    @media(min-width: 500px){
-        background-image: url("../images/onlineu.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -525,8 +522,7 @@ background-position: center;
 }
 
 .project-box--switchup, .project-box-image--switchup{
-    @media(min-width: 500px){
-        background-image: url("../images/switchup.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -535,8 +531,7 @@ background-position: center;
 }
 
 .project-box--fuzzy-britch, .project-box-image--fuzzy-britch{
-    @media(min-width: 500px){
-        background-image: url("../images/fuzzy-design.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -545,8 +540,7 @@ background-position: center;
 }
 
 .project-box--extension, .project-box-image--extension{
-    @media(min-width: 500px){
-        background-image: url("../images/FEmentorExtension.jpg");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -555,8 +549,7 @@ background-position: center;
 }
 
 .project-box--recs, .project-box-image--recs{
-    @media(min-width: 500px){
-        background-image: url("../images/recs.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -565,8 +558,7 @@ background-position: center;
 }
 
 .project-box--symply, .project-box-image--symply{
-    @media(min-width: 500px){
-        background-image: url("../images/symply.png");
+    @media(min-width: 500px){        
     }
 
     background-size: cover;
@@ -581,8 +573,7 @@ background-position: center;
 .project-box--figma, .project-box-image--figma{
     background-color: #171D26;
     @media(min-width: 500px){
-        background: #434B5E;
-        background-image: url("../images/figma-1-logo-png-transparent.png");
+        background: #434B5E;        
     }
 
     background-size: 25%;
@@ -593,8 +584,7 @@ background-position: center;
 .project-box--portfolio, .project-box-image--portfolio{
     background-color: #171D26;
     @media(min-width: 500px){
-        background: #434B5E;
-        background-image: url("../images/TitleCard.png");
+        background: #434B5E;        
     }
 
     background-size: cover;
@@ -606,8 +596,7 @@ background-position: center;
 .project-box--thumb, .project-box-image--thumb{
     background-color: #171D26;
     @media(min-width: 500px){
-        background: #434B5E;
-        background-image: url("../images/Title.png");
+        background: #434B5E;        
     }
 
     background-size: cover;
@@ -619,8 +608,7 @@ background-position: center;
 .project-box--financial, .project-box-image--financial{
     background-color: #171D26;
     @media(min-width: 500px){
-        background: #434B5E;
-        background-image: url("../images/Frame1.png");
+        background: #434B5E;        
     }
 
     background-size: cover;
@@ -632,8 +620,7 @@ background-position: center;
 .project-box--keyboard, .project-box-image--keyboard{
     background-color: #171D26;
     @media(min-width: 500px){
-        background: #434B5E;
-        background-image: url("../images/keys.png");
+        background: #434B5E;        
     }
 
     background-size: 225%;
@@ -644,8 +631,7 @@ background-position: center;
 .project-box--github, .project-box-image--github{
     background-color: #171D26;
     @media(min-width: 500px){
-        background: #434B5E;
-        background-image: url("../images/git.png");
+        background: #434B5E;        
     }
 
     background-size: 60%;
