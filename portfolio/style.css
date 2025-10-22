@@ -385,7 +385,8 @@ p{
     text-align: right;
 }
 
-.intro-image{
+.intro-image-d{
+    display: none;
     width: 100%;
     height: auto;    
     border-radius: 18px;
@@ -394,7 +395,21 @@ p{
     box-shadow: 0px 0px 8px 0px rgba(67,75,94,1);
 
     @media(min-width: 500px){
-        width: 90%;
+        display: block;
+    }
+}
+
+.intro-image-m{
+    display: block;
+    width: 100%;
+    height: auto;    
+    border-radius: 18px;
+    background-color: #263140;
+    border: 3px solid #2D3442; 
+    box-shadow: 0px 0px 8px 0px rgba(67,75,94,1);
+
+    @media(min-width: 500px){
+        display: none;
     }
 }
 
