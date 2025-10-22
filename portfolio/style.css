@@ -571,13 +571,25 @@ background-position: center;
 
 .project-box--figma, .project-box-image--figma{
     background-color: #171D26;
+
+    align-content: center;
+
     @media(min-width: 500px){
         background: #434B5E;        
     }
 
-    background-size: 25%;
+    /* background-size: 25%; */
     background-repeat: no-repeat;
     background-position: 50%;
+}
+
+.project-box-image--figma, .project-box-image--github{
+    align-content: center;
+}
+
+.project-box-image--figma img, .project-box-image--github img{
+    height: 75%;
+    width: auto;
 }
 
 .project-box--portfolio, .project-box-image--portfolio{
