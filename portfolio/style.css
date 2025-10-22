@@ -380,13 +380,12 @@ p{
     flex: 0 1 45%;   
 }
 
-
+/* 
 .section-right--image-container{
     text-align: right;
-}
+} */
 
-.intro-image{
-    width: 100%;
+.intro-image{    
     height: auto;    
     border-radius: 18px;
     background-color: #263140;
